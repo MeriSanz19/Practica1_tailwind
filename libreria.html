@@ -1,16 +1,381 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Librería Filigrana</title>
-    <link rel="stylesheet" href="CSS/style.css" />
-  </head>
-  <body id="index">
-    <nav class="navbar">
-      <a href="index.html" class="nav-item">HOME</a>
-      <a href="libreria.html" class="nav-item active">LIBRERÍA</a>
-      <a href="sobrenosotros.html" class="nav-item">SOBRE NOSOTROS</a>
-    </nav>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Filigrana · Librería independiente</title>
+  <meta name="description" content="Filigrana es una pequeña librería independiente de barrio: arte, diseño gráfico, fotografía e ilustración.">
+
+  <!-- Fuente de la navegación -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://use.typekit.net/ooc3ruf.css">
+
+  <!-- Tailwind CSS (Play CDN) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <body class="font-helvetica font-medium text-black"
+  >
+    <!-- HEAD / NAVBAR -->
+    <header class="fixed z-50 mt-[27px] h-[41px] w-full flex-none bg-blue-600 md:mt-[1.875%] md:h-[max(41px,2.847vw)]">
+      <nav aria-label="Principal" class="flex h-full flex-row-reverse items-center justify-between px-3 md:flex-row md:pl-[3.125%] md:pr-[1.215%]">
+
+        <!-- Enlaces -->
+        <ul class="m-0 flex list-none items-center gap-[30px] p-0 md:gap-[10%]">
+          <li class="hidden md:block"><a href="#" class="whitespace-nowrap text-[15px] leading-none text-black transition-colors hover:text-red-600">FILIGRANA</a></li>
+          <li><a href="#" class="whitespace-nowrap text-[15px] leading-none text-black transition-colors hover:text-red-600">BOOKS</a></li>
+          <li><a href="#" class="whitespace-nowrap text-[15px] leading-none text-black transition-colors hover:text-red-600">SOBRE NOSOTRAS</a></li>
+        </ul>
+
+        <!-- Icono "g": vuelve a la home -->
+        <a href="index.html" aria-label="Filigrana, volver a la home" class="flex h-full flex-none items-center">
+          <img src="imagenes/Mesa de trabajo 2 copia.png" alt="Filigrana" class="block h-full w-auto">
+        </a>
+      </nav>
+    </header>
+
+    <section class="pt-15 md:pt-20">
+  <h2 class="mb-6 px-4 text-lg uppercase md:px-10 lg:px-16 text-red-600">
+    Bestsellers
+  </h2>
+
+    <div class="flex items-end gap-2 overflow-x-auto px-4 md:px-10 lg:px-16 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+
+      <div data-lomo data-open="false" class="relative shrink-0 cursor-pointer overflow-hidden transition-[width] duration-500 ease-out">
+        <img data-spine src="imagenes/libros_lomos/03_interview_madonna.png" alt="interview, Madonna" class="block h-auto w-4 max-w-none sm:w-5 md:w-5.5">
+        <img src="imagenes/libros_portadas/revista editada6.png" alt="Portada de interview, Madonna" class="absolute left-full top-0 h-full w-auto max-w-none">
+      </div>
+
+      <div data-lomo data-open="false" class="relative shrink-0 cursor-pointer overflow-hidden transition-[width] duration-500 ease-out">
+        <img data-spine src="imagenes/libros_lomos/04_elephant_pippa_garner.png" alt="Elephant, Pippa Garner" class="block h-auto w-4 max-w-none sm:w-5 md:w-5.5">
+        <img src="imagenes/libros_portadas/revista editada2.png" alt="Portada de Elephant, Pippa Garner" class="absolute left-full top-0 h-full w-auto max-w-none">
+      </div>
+
+      <div data-lomo data-open="false" class="relative shrink-0 cursor-pointer overflow-hidden transition-[width] duration-500 ease-out">
+        <img data-spine src="imagenes/libros_lomos/01_1000_chairs.png" alt="Lomo libro 1" class="block h-auto w-10 max-w-none sm:w-12 md:w-15">
+        <img src="imagenes/portadas/01_1000_chairs.png" alt="Portada libro 1" class="absolute left-full top-0 h-full w-auto max-w-none">
+      </div>
+
+      <div data-lomo data-open="false" class="relative shrink-0 cursor-pointer overflow-hidden transition-[width] duration-500 ease-out">
+        <img data-spine src="imagenes/libros_lomos/02_the_elements_of_brand_design.png" alt="Lomo libro 2" class="block h-auto w-10 max-w-none sm:w-12 md:w-15">
+        <img src="imagenes/portadas/02_the_elements_of_brand_design.png" alt="Portada libro 2" class="absolute left-full top-0 h-full w-auto max-w-none">
+      </div>
+
+      <div data-lomo data-open="false" class="relative shrink-0 cursor-pointer overflow-hidden transition-[width] duration-500 ease-out">
+        <img data-spine src="imagenes/libros_lomos/03_david_hockney_my_window.png" alt="Lomo libro 3" class="block h-auto w-10 max-w-none sm:w-12 md:w-15">
+        <img src="imagenes/portadas/03_david_hockney_my_window.png" alt="Portada libro 3" class="absolute left-full top-0 h-full w-auto max-w-none">
+      </div>
+
+      <div data-lomo data-open="false" class="relative shrink-0 cursor-pointer overflow-hidden transition-[width] duration-500 ease-out">
+        <img data-spine src="imagenes/libros_lomos/04_formgiving.png" alt="Lomo libro 4" class="block h-auto w-10 max-w-none sm:w-12 md:w-15">
+        <img src="imagenes/portadas/04_formgiving.png" alt="Portada libro 4" class="absolute left-full top-0 h-full w-auto max-w-none">
+      </div>
+
+      <div data-lomo data-open="false" class="relative shrink-0 cursor-pointer overflow-hidden transition-[width] duration-500 ease-out">
+        <img data-spine src="imagenes/libros_lomos/05_hetero.png" alt="Lomo libro 5" class="block h-auto w-10 max-w-none sm:w-12 md:w-15">
+        <img src="imagenes/portadas/05_hetero.png" alt="Portada libro 5" class="absolute left-full top-0 h-full w-auto max-w-none">
+      </div>
+
+      <div data-lomo data-open="false" class="relative shrink-0 cursor-pointer overflow-hidden transition-[width] duration-500 ease-out">
+        <img data-spine src="imagenes/libros_lomos/06_youll_never_meet_my_new_friends.png" alt="Lomo libro 6" class="block h-auto w-10 max-w-none sm:w-12 md:w-15">
+        <img src="imagenes/portadas/06_youll_never_meet_my_new_friends.png" alt="Portada libro 6" class="absolute left-full top-0 h-full w-auto max-w-none">
+      </div>
+
+      <div data-lomo data-open="false" class="relative shrink-0 cursor-pointer overflow-hidden transition-[width] duration-500 ease-out">
+        <img data-spine src="imagenes/libros_lomos/07_mammalia.png" alt="Lomo libro 7" class="block h-auto w-10 max-w-none sm:w-12 md:w-15">
+        <img src="imagenes/portadas/07_mammalia.png" alt="Portada libro 7" class="absolute left-full top-0 h-full w-auto max-w-none">
+      </div>
+
+      <div data-lomo data-open="false" class="relative shrink-0 cursor-pointer overflow-hidden transition-[width] duration-500 ease-out">
+        <img data-spine src="imagenes/libros_lomos/08_the_package_design_book_8.png" alt="Lomo libro 8" class="block h-auto w-10 max-w-none sm:w-12 md:w-15">
+        <img src="imagenes/portadas/08_the_package_design_book_8.png" alt="Portada libro 8" class="absolute left-full top-0 h-full w-auto max-w-none">
+      </div>
+
+      <div data-lomo data-open="false" class="relative shrink-0 cursor-pointer overflow-hidden transition-[width] duration-500 ease-out">
+        <img data-spine src="imagenes/libros_lomos/09_diseno_del_siglo_xx.png" alt="Lomo libro 9" class="block h-auto w-10 max-w-none sm:w-12 md:w-15">
+        <img src="imagenes/portadas/09_diseno_del_siglo_xx.png" alt="Portada libro 9" class="absolute left-full top-0 h-full w-auto max-w-none">
+      </div>
+
+      <div data-lomo data-open="false" class="relative shrink-0 cursor-pointer overflow-hidden transition-[width] duration-500 ease-out">
+        <img data-spine src="imagenes/libros_lomos/10_lomo_azul.png" alt="Lomo libro 10" class="block h-auto w-10 max-w-none sm:w-12 md:w-15">
+        <img src="imagenes/portadas/10_lomo_azul.png" alt="Portada libro 10" class="absolute left-full top-0 h-full w-auto max-w-none">
+      </div>
+
+      <div data-lomo data-open="false" class="relative shrink-0 cursor-pointer overflow-hidden transition-[width] duration-500 ease-out">
+        <img data-spine src="imagenes/libros_lomos/11_alcohol_and_tobacco.png" alt="Lomo libro 11" class="block h-auto w-10 max-w-none sm:w-12 md:w-15">
+        <img src="imagenes/portadas/11_alcohol_and_tobacco.png" alt="Portada libro 11" class="absolute left-full top-0 h-full w-auto max-w-none">
+      </div>
+
+      <div data-lomo data-open="false" class="relative shrink-0 cursor-pointer overflow-hidden transition-[width] duration-500 ease-out">
+        <img data-spine src="imagenes/libros_lomos/12_package_design_book_7.png" alt="Lomo libro 12" class="block h-auto w-10 max-w-none sm:w-12 md:w-15">
+        <img src="imagenes/portadas/12_package_design_book_7.png" alt="Portada libro 12" class="absolute left-full top-0 h-full w-auto max-w-none">
+      </div>
+
+      <div data-lomo data-open="false" class="relative shrink-0 cursor-pointer overflow-hidden transition-[width] duration-500 ease-out">
+        <img data-spine src="imagenes/libros_lomos/13_east_meets_west.png" alt="Lomo libro 13" class="block h-auto w-10 max-w-none sm:w-12 md:w-15">
+        <img src="imagenes/portadas/13_east_meets_west.png" alt="Portada libro 13" class="absolute left-full top-0 h-full w-auto max-w-none">
+      </div>
+
+      <div data-lomo data-open="false" class="relative shrink-0 cursor-pointer overflow-hidden transition-[width] duration-500 ease-out">
+        <img data-spine src="imagenes/libros_lomos/14_understanding_the_world.png" alt="Lomo libro 14" class="block h-auto w-10 max-w-none sm:w-12 md:w-15">
+        <img src="imagenes/portadas/14_understanding_the_world.png" alt="Portada libro 14" class="absolute left-full top-0 h-full w-auto max-w-none">
+      </div>
+
+      <div data-lomo data-open="false" class="relative shrink-0 cursor-pointer overflow-hidden transition-[width] duration-500 ease-out">
+        <img data-spine src="imagenes/libros_lomos/01_elephant_miles_greenberg.png" alt="Elephant, Miles Greenberg" class="block h-auto w-4 max-w-none sm:w-5 md:w-5.5">
+        <img src="imagenes/portadas/01_elephant_miles_greenberg.png" alt="Portada de Elephant, Miles Greenberg" class="absolute left-full top-0 h-full w-auto max-w-none">
+      </div>
+
+      <div data-lomo data-open="false" class="relative shrink-0 cursor-pointer overflow-hidden transition-[width] duration-500 ease-out">
+        <img data-spine src="imagenes/libros_lomos/02_elephant_judy_chicago.png" alt="Elephant, Judy Chicago" class="block h-auto w-4 max-w-none sm:w-5 md:w-5.5">
+        <img src="imagenes/portadas/02_elephant_judy_chicago.png" alt="Portada de Elephant, Judy Chicago" class="absolute left-full top-0 h-full w-auto max-w-none">
+      </div>
+
+      <div data-lomo data-open="false" class="relative shrink-0 cursor-pointer overflow-hidden transition-[width] duration-500 ease-out">
+        <img data-spine src="imagenes/libros_lomos/15_menu_design_in_america.png" alt="Lomo libro 15" class="block h-auto w-10 max-w-none sm:w-12 md:w-15">
+        <img src="imagenes/portadas/15_menu_design_in_america.png" alt="Portada libro 15" class="absolute left-full top-0 h-full w-auto max-w-none">
+      </div>
+
+      <div data-lomo data-open="false" class="relative shrink-0 cursor-pointer overflow-hidden transition-[width] duration-500 ease-out">
+        <img data-spine src="imagenes/libros_lomos/05_interview_zendaya_pattinson.png" alt="Interview, Zendaya Pattinson" class="block h-auto w-4 max-w-none sm:w-5 md:w-5.5">
+        <img src="imagenes/portadas/05_interview_zendaya_pattinson.png" alt="Portada de Interview, Zendaya Pattinson" class="absolute left-full top-0 h-full w-auto max-w-none">
+      </div>
+
+      <div data-lomo data-open="false" class="relative shrink-0 cursor-pointer overflow-hidden transition-[width] duration-500 ease-out">
+        <img data-spine src="imagenes/libros_lomos/06_elephant_romney_jahmal.png" alt="Elephant, Romney Jahmal" class="block h-auto w-4 max-w-none sm:w-5 md:w-5.5">
+        <img src="imagenes/portadas/06_elephant_romney_jahmal.png" alt="Portada de Elephant, Romney Jahmal" class="absolute left-full top-0 h-full w-auto max-w-none">
+      </div>
+
+      <div data-lomo data-open="false" class="relative shrink-0 cursor-pointer overflow-hidden transition-[width] duration-500 ease-out">
+        <img data-spine src="imagenes/libros_lomos/07_032c.png" alt="032c" class="block h-auto w-4 max-w-none sm:w-5 md:w-5.5">
+        <img src="imagenes/portadas/07_032c.png" alt="Portada de 032c" class="absolute left-full top-0 h-full w-auto max-w-none">
+      </div>
+
+    </div>
+  </section>
+
+<section>
+
+  <h2 class="mb-6 mt-10 px-4 text-lg uppercase text-red-600 md:mt-14 md:px-10 lg:px-16">
+    Catálogo
+  </h2>
+
+  <div class="grid grid-cols-1 gap-4 px-4 min-[400px]:grid-cols-2 md:grid-cols-3 md:gap-6 md:px-10 lg:grid-cols-4 lg:px-16">
+
+    <article data-libro data-open="false" class="group relative aspect-[2/3] cursor-pointer overflow-hidden">
+      <img src="imagenes/catalogo/revista1.png" class="h-full w-full object-cover">
+      <div class="absolute inset-0 flex flex-col justify-center bg-[#e63b2e] p-4 text-sm text-white opacity-0 transition-opacity duration-300 group-data-[open=true]:opacity-100 md:group-hover:opacity-100">
+        <h3 class="mb-2 font-bold uppercase">Interview 563</h3>
+        <p class="font-light">Jeremy Allen White.</p>
+      </div>
+    </article>
+
+    <article data-libro data-open="false" class="group relative aspect-[2/3] cursor-pointer overflow-hidden">
+      <img src="imagenes/catalogo/libro2.jpg" class="h-full w-full object-cover">
+      <div class="absolute inset-0 flex flex-col justify-center bg-[#2b59ff] p-4 text-sm text-white opacity-0 transition-opacity duration-300 group-data-[open=true]:opacity-100 md:group-hover:opacity-100">
+        <h3 class="mb-2 font-bold uppercase">Barragán: His Library</h3>
+        <p class="font-light">La biblioteca de Luis Barragán en su casa de Ciudad de México.</p>
+      </div>
+    </article>
+
+    <article data-libro data-open="false" class="group relative aspect-[2/3] cursor-pointer overflow-hidden">
+      <img src="imagenes/catalogo/revista3.png" class="h-full w-full object-cover">
+      <div class="absolute inset-0 flex flex-col justify-center bg-[#f2b705] p-4 text-sm text-white opacity-0 transition-opacity duration-300 group-data-[open=true]:opacity-100 md:group-hover:opacity-100">
+        <h3 class="mb-2 font-bold uppercase">Elephant 30</h3>
+        <p class="font-light">Apps y copyright.</p>
+      </div>
+    </article>
+
+    <article data-libro data-open="false" class="group relative aspect-[2/3] cursor-pointer overflow-hidden">
+      <img src="imagenes/catalogo/libro6.png" class="h-full w-full object-cover">
+      <div class="absolute inset-0 flex flex-col justify-center bg-[#1f9d55] p-4 text-sm text-white opacity-0 transition-opacity duration-300 group-data-[open=true]:opacity-100 md:group-hover:opacity-100">
+        <h3 class="mb-2 font-bold uppercase">Arnold</h3>
+        <p class="font-light"> La trayectoria de Arnold Schwarzenegger, del culturismo al cine y a la política.</p>
+      </div>
+    </article>
+
+    <article data-libro data-open="false" class="group relative aspect-[2/3] cursor-pointer overflow-hidden">
+      <img src="imagenes/catalogo/revista5.png" class="h-full w-full object-cover">
+      <div class="absolute inset-0 flex flex-col justify-center bg-[#d946ef] p-4 text-sm text-white opacity-0 transition-opacity duration-300 group-data-[open=true]:opacity-100 md:group-hover:opacity-100">
+        <h3 class="mb-2 font-bold uppercase">Elephant 40</h3>
+        <p class="font-light">Diez años de la revista</p>
+      </div>
+    </article>
+
+    <article data-libro data-open="false" class="group relative aspect-[2/3] cursor-pointer overflow-hidden">
+      <img src="imagenes/catalogo/revista6.png" class="h-full w-full object-cover">
+      <div class="absolute inset-0 flex flex-col justify-center bg-[#f97316] p-4 text-sm text-white opacity-0 transition-opacity duration-300 group-data-[open=true]:opacity-100 md:group-hover:opacity-100">
+        <h3 class="mb-2 font-bold uppercase">Elephant 41</h3>
+        <p class="font-light">Lo doméstico y lo salvaje.</p>
+      </div>
+    </article>
+
+    <article data-libro data-open="false" class="group relative aspect-[2/3] cursor-pointer overflow-hidden">
+      <img src="imagenes/catalogo/revista7.png" class="h-full w-full object-cover">
+      <div class="absolute inset-0 flex flex-col justify-center bg-[#e63b2e] p-4 text-sm text-white opacity-0 transition-opacity duration-300 group-data-[open=true]:opacity-100 md:group-hover:opacity-100">
+        <h3 class="mb-2 font-bold uppercase">cara 04</h3>
+        <p class="font-light">El último número.</p>
+      </div>
+    </article>
+
+    <article data-libro data-open="false" class="group relative aspect-[2/3] cursor-pointer overflow-hidden">
+      <img src="imagenes/catalogo/libro1.jpg" class="h-full w-full object-cover">
+      <div class="absolute inset-0 flex flex-col justify-center bg-[#2b59ff] p-4 text-sm text-white opacity-0 transition-opacity duration-300 group-data-[open=true]:opacity-100 md:group-hover:opacity-100">
+        <h3 class="mb-2 font-bold uppercase">Pepita</h3>
+        <p class="font-light">Vita Sackville-West. La vida de su abuela, la bailarina española Pepita.</p>
+      </div>
+    </article>
+
+    <article data-libro data-open="false" class="group relative aspect-[2/3] cursor-pointer overflow-hidden">
+      <img src="imagenes/catalogo/libro4.jpg" class="h-full w-full object-cover">
+      <div class="absolute inset-0 flex flex-col justify-center bg-[#f2b705] p-4 text-sm text-white opacity-0 transition-opacity duration-300 group-data-[open=true]:opacity-100 md:group-hover:opacity-100">
+        <h3 class="mb-2 font-bold uppercase">Sex</h3>
+        <p class="font-light">Madonna. El libro de fotos de 1992. Esta es la edición japonesa, con el single de Erotica.</p>
+      </div>
+    </article>
+
+    <article data-libro data-open="false" class="group relative aspect-[2/3] cursor-pointer overflow-hidden">
+      <img src="imagenes/catalogo/revista editada10.png" class="h-full w-full object-cover">
+      <div class="absolute inset-0 flex flex-col justify-center bg-[#1f9d55] p-4 text-sm text-white opacity-0 transition-opacity duration-300 group-data-[open=true]:opacity-100 md:group-hover:opacity-100">
+      <h3 class="mb-2 uppercase">Colors 29</h3>
+      <p class="font-light">Juguetes.</p>
+      </div>
+    </article>
+
+    <article data-libro data-open="false" class="group relative aspect-[2/3] cursor-pointer overflow-hidden">
+      <img src="imagenes/catalogo/libro5.png" class="h-full w-full object-cover">
+      <div class="absolute inset-0 flex flex-col justify-center bg-[#d946ef] p-4 text-sm text-white opacity-0 transition-opacity duration-300 group-data-[open=true]:opacity-100 md:group-hover:opacity-100">
+      <h3 class="mb-2 font-bold uppercase">Freud</h3>
+      <p class="font-light">La pintura de Lucian Freud, del cuadro de la cebra a los retratos. Sebastian Smee.</p>
+      </div>
+    </article>
+
+    <article data-libro data-open="false" class="group relative aspect-[2/3] cursor-pointer overflow-hidden">
+      <img src="imagenes/catalogo/revista editada9.png" class="h-full w-full object-cover">
+      <div class="absolute inset-0 flex flex-col justify-center bg-[#f97316] p-4 text-sm text-white opacity-0 transition-opacity duration-300 group-data-[open=true]:opacity-100 md:group-hover:opacity-100">
+      <h3 class="mb-2 font-bold uppercase">Colors 7.</h3>
+      <p class="font-light"> Sobre AIDS</p>
+      </div>
+    </article>
+
+    <article data-libro data-open="false" class="group relative aspect-[2/3] cursor-pointer overflow-hidden">
+      <img src="imagenes/catalogo/libro7.png" class="h-full w-full object-cover">
+      <div class="absolute inset-0 flex flex-col justify-center bg-[#e63b2e] p-4 text-sm text-white opacity-0 transition-opacity duration-300 group-data-[open=true]:opacity-100 md:group-hover:opacity-100">
+        <h3 class="mb-2 font-bold uppercase">Extraordinary Records</h3>
+        <p class="font-light">Discos de vinilo raros, únicos o casi imposibles de encontrar.</p>
+      </div>
+    </article>
+
+    <article data-libro data-open="false" class="group relative aspect-[2/3] cursor-pointer overflow-hidden">
+      <img src="imagenes/catalogo/revista editada11.png" class="h-full w-full object-cover">
+      <div class="absolute inset-0 flex flex-col justify-center bg-[#2b59ff] p-4 text-sm text-white opacity-0 transition-opacity duration-300 group-data-[open=true]:opacity-100 md:group-hover:opacity-100">
+        <h3 class="mb-2 font-bold uppercase">Colors 40</h3>
+        <p class="font-light">Basura.</p>
+      </div>
+    </article>
+
+    <article data-libro data-open="false" class="group relative aspect-[2/3] cursor-pointer overflow-hidden">
+      <img src="imagenes/catalogo/revista editada8.png" class="h-full w-full object-cover">
+      <div class="absolute inset-0 flex flex-col justify-center bg-[#f2b705] p-4 text-sm text-white opacity-0 transition-opacity duration-300 group-data-[open=true]:opacity-100 md:group-hover:opacity-100">
+        <h3 class="mb-2 font-bold uppercase">032c 49</h3>
+        <p class="font-light">Florentina Holzinger, por Juergen Teller</p>
+      </div>
+    </article>
+
+    <article data-libro data-open="false" class="group relative aspect-[2/3] cursor-pointer overflow-hidden">
+      <img src="imagenes/catalogo/revista editada12.png" class="h-full w-full object-cover">
+      <div class="absolute inset-0 flex flex-col justify-center bg-[#1f9d55] p-4 text-sm text-white opacity-0 transition-opacity duration-300 group-data-[open=true]:opacity-100 md:group-hover:opacity-100">
+        <h3 class="mb-2 font-bold uppercase">Colors</h3>
+        <p class="font-light">Mirando al arte</p>
+      </div>
+    </article>
+
+    <article data-libro data-open="false" class="group relative aspect-[2/3] cursor-pointer overflow-hidden">
+      <img src="imagenes/catalogo/libro3.jpg" class="h-full w-full object-cover">
+      <div class="absolute inset-0 flex flex-col justify-center bg-[#d946ef] p-4 text-sm text-white opacity-0 transition-opacity duration-300 group-data-[open=true]:opacity-100 md:group-hover:opacity-100">
+        <h3 class="mb-2 font-bold uppercase">Imperial courts</h3>
+        <p class="font-light">Dana Lixenberg. Retrato del barrio mperial Courts, en Watts, a lo largo de veinte años.</p>
+      </div>
+    </article>
+
+    <article data-libro data-open="false" class="group relative aspect-[2/3] cursor-pointer overflow-hidden">
+      <img src="imagenes/catalogo/libro 9.png" class="h-full w-full object-cover">
+      <div class="absolute inset-0 flex flex-col justify-center bg-[#f97316] p-4 text-sm text-white opacity-0 transition-opacity duration-300 group-data-[open=true]:opacity-100 md:group-hover:opacity-100">
+        <h3 class="mb-2 font-bold uppercase">Basquiat</h3>
+        <p class="font-light">La obra de Jean-Michel Basquiat.</p>
+      </div>
+    </article>
+
+    <article data-libro data-open="false" class="group relative aspect-[2/3] cursor-pointer overflow-hidden">
+      <img src="imagenes/catalogo/libro 8.png" class="h-full w-full object-cover">
+      <div class="absolute inset-0 flex flex-col justify-center bg-[#e63b2e] p-4 text-sm text-white opacity-0 transition-opacity duration-300 group-data-[open=true]:opacity-100 md:group-hover:opacity-100">
+        <h3 class="mb-2 font-bold uppercase">Los archivos personales de Stanley Kubrick</h3>
+        <p class="font-light">Fotos, notas y documentos de sus películas, editados por Alison Castle.</p>
+      </div>
+    </article>
+
+    <article data-libro data-open="false" class="group relative aspect-[2/3] cursor-pointer overflow-hidden">
+      <img src="imagenes/catalogo/revista4.png" class="h-full w-full object-cover">
+      <div class="absolute inset-0 flex flex-col justify-center bg-[#2b59ff] p-4 text-sm text-white opacity-0 transition-opacity duration-300 group-data-[open=true]:opacity-100 md:group-hover:opacity-100">
+        <h3 class="mb-2 font-bold uppercase">Elephant 33</h3>
+        <p class="font-light">El humor en el arte.</p>
+      </div>
+    </article>
+
+  </div>
+
+</section>
+
+
+    <script>
+    const tarjetas = document.querySelectorAll('[data-libro]');
+    tarjetas.forEach(t => {
+      t.addEventListener('click', () => {
+        const abrir = t.dataset.open !== 'true';
+        tarjetas.forEach(o => o.dataset.open = 'false');
+        t.dataset.open = abrir ? 'true' : 'false';
+      });
+    });
+  </script>
+
+      <script>
+    const lomos = document.querySelectorAll('[data-lomo]');
+    const conHover = window.matchMedia('(hover: hover)').matches;
+
+    function abrirLibro(l) {
+    if (l.dataset.open === 'true') return;
+    const lomo = l.querySelector('[data-spine]');
+    const portada = l.querySelector('img:not([data-spine])');
+    const anchoLomo = lomo.offsetWidth;
+    l.style.width = anchoLomo + 'px'; // punto de partida
+    l.offsetWidth; // fuerza al navegador a registrarlo
+    portada.style.left = anchoLomo + 'px';
+    l.style.width = anchoLomo + portada.offsetWidth + 'px';
+    l.dataset.open = 'true';
+  }
+
+    function cerrarLibro(l) {
+      if (l.dataset.open !== 'true') return;
+      l.style.width = l.querySelector('[data-spine]').offsetWidth + 'px';
+      l.dataset.open = 'false';
+    }
+    lomos.forEach(l => l.addEventListener('transitionend', () => {
+      if (l.dataset.open === 'false') l.style.width = '';
+    }));
+
+    lomos.forEach(l => {
+      if (conHover) {
+        l.addEventListener('mouseenter', () => abrirLibro(l));
+        l.addEventListener('mouseleave', () => cerrarLibro(l));
+      } else {
+        l.addEventListener('click', () => {
+          const yaAbierto = l.dataset.open === 'true';
+          lomos.forEach(cerrarLibro);
+          if (!yaAbierto) abrirLibro(l);
+        });
+      }
+    });
+</script>
+    </main>
   </body>
 </html>
