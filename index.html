@@ -16,6 +16,7 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
+      darkMode: 'class',
       theme: {
         extend: {
           colors: { filigrana: '#314bf4',
@@ -31,7 +32,7 @@
   <link rel="stylesheet" href="css/styles.css">
 </head>
 
-<body class="index-page bg-transparent font-helvetica font-medium text-black">
+<body class="index-page bg-transparent font-helvetica font-medium text-black dark:bg-black dark:text-white">
 
   <!--
     Hero responsive 100 % con flexbox.
@@ -39,7 +40,7 @@
     · ≥ md  (escritorio) → composición del frame "homepage oficial" (1440 × 659)
     Las medidas son porcentajes del ancho del hero, así que todo escala en proporción.
   -->
-  <div class="flex min-h-svh w-full flex-col overflow-hidden bg-white md:min-h-0">
+  <div class="flex min-h-svh w-full flex-col overflow-hidden bg-white dark:bg-black md:min-h-0">
 
     <!-- HEAD / NAVBAR -->
     <header class="fixed z-50 mt-[0px] h-[41px] w-full flex-none bg-filigrana md:mt-[0%] md:h-[max(41px,2.847vw)]">
@@ -281,13 +282,13 @@
   const themeToggle = document.getElementById('theme-toggle');
   const savedTheme = localStorage.getItem('filigrana-theme');
   const isDarkMode = savedTheme === 'dark';
-  document.body.classList.toggle('dark-mode', isDarkMode);
+  document.documentElement.classList.toggle('dark', isDarkMode);
   themeToggle.setAttribute('aria-pressed', String(isDarkMode));
   themeToggle.setAttribute('aria-label', isDarkMode ? 'Activar modo claro' : 'Activar modo oscuro');
   themeToggle.querySelector('img').src = isDarkMode ? 'images/noche.png' : 'images/luz.png';
 
   themeToggle.addEventListener('click', () => {
-    const isDark = document.body.classList.toggle('dark-mode');
+    const isDark = document.documentElement.classList.toggle('dark');
     localStorage.setItem('filigrana-theme', isDark ? 'dark' : 'light');
     themeToggle.setAttribute('aria-pressed', String(isDark));
     themeToggle.setAttribute('aria-label', isDark ? 'Activar modo claro' : 'Activar modo oscuro');
