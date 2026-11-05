@@ -1,16 +1,265 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Librería Filigrana</title>
-    <link rel="stylesheet" href="CSS/style.css" />
-  </head>
-  <body id="index">
-    <nav class="navbar">
-      <a href="index.html" class="nav-item">HOME</a>
-      <a href="libreria.html" class="nav-item active">LIBRERÍA</a>
-      <a href="sobrenosotros.html" class="nav-item">SOBRE NOSOTROS</a>
-    </nav>
-  </body>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Filigrana · Librería independiente</title>
+  <meta name="description" content="Filigrana es una pequeña librería independiente de barrio: arte, diseño gráfico, fotografía e ilustración.">
+
+  <!-- Fuente de la navegación -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://use.typekit.net/ooc3ruf.css">
+
+  <!-- Tailwind CSS (Play CDN) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { filigrana: '#314bf4' },
+          fontFamily: { inter: ['helvetica', 'system-ui', 'sans-serif'] },
+        },
+      },
+    };
+  </script>
+
+  <!-- Estilos propios -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body class="bg-transparent font-helvetica font-medium text-black">
+
+  <!--
+    Hero responsive 100 % con flexbox.
+    · < md  (móvil)   → composición del frame "iPhone 16 - 4" de Figma
+    · ≥ md  (escritorio) → composición del frame "homepage oficial" (1440 × 659)
+    Las medidas son porcentajes del ancho del hero, así que todo escala en proporción.
+  -->
+  <div class="flex min-h-svh w-full flex-col overflow-hidden bg-white md:min-h-0">
+
+    <!-- HEAD / NAVBAR -->
+    <header class="fixed z-50 mt-[0px] h-[41px] w-full flex-none bg-filigrana md:mt-[0%] md:h-[max(41px,2.847vw)]">
+      <nav aria-label="Principal" class="flex h-full flex-row-reverse items-center justify-between px-3 md:flex-row md:pl-[3.125%] md:pr-[1.215%]">
+
+        <!-- Enlaces -->
+        <ul class="m-0 flex list-none items-center gap-[30px] p-0 md:gap-[10%]">
+          <li class="hidden md:block"><a href="index.html" class="whitespace-nowrap text-[15px] leading-none text-red-600">FILIGRANA</a></li>
+          <li><a href="#" class="whitespace-nowrap text-[15px] leading-none text-black transition-colors hover:text-red-600">BOOKS</a></li>
+          <li><a href="about.html" class="whitespace-nowrap text-[15px] leading-none text-black transition-colors hover:text-red-600">SOBRE NOSOTRAS</a></li>
+        </ul>
+
+        <!-- Icono "g": vuelve a la home -->
+        <a href="index.html" aria-label="Filigrana, volver a la home" class="flex h-full flex-none items-center">
+          <img src="images/logo-g.png" alt="Filigrana" class="block h-full w-auto">
+        </a>
+      </nav>
+    </header>
+
+    <!-- HERO: logotipo + eslogan -->
+    <section aria-labelledby="hero-title" class=" fixed z-40 mt-[100svh] flex w-[82.4%] flex-none flex-col items-end self-center md:ml-[30.4%] md:mt-[10.22%] md:w-[35.2%] md:self-start">
+      <h1 id="hero-title" class="m-0 w-full">
+        <img src="images/filigrana.png" alt="filigrana" class="block h-auto w-full">
+      </h1>
+      <p class="-mt-[3.5%] text-[length:10px] leading-none md:-mr-[1.08%] md:-mt-[4.08%] md:text-[length:max(10px,1.0417vw)] text-[#ff0000]">BIENVENIDOS A NUESTRA LIBRERÍA</p>
+    </section>
+
+    <!-- PORTADAS (collage en flex: items-end + márgenes negativos para solapar) -->
+      <ul id="gallery-template"aria-label="Libros y revistas destacados" class=" relative m-0 min-h-screen flex w-full flex-none list-none items-start justify-start p-0 md:min-h-[234vh] md:mt-[7%] md:top-[28vh]">
+        <li class="flex-none transition-transform duration-300 hover:!z-[40] hover:scale-[1.06] z-[1] order-[1] w-[17.557%] ml-[0%] mt-[6.616%] aspect-[69/92] md:order-[1] md:w-[6.319%] md:ml-[0%] md:mb-[0%] md:aspect-[91/123]">
+          <img src="images/editada1.webp" alt="book" decoding="async" class="block h-full w-full object-cover">
+        </li>
+        <li class="flex-none transition-transform duration-300 hover:!z-[40] hover:scale-[1.06] z-[2] order-[3] w-[16.539%] ml-[-13.74%] mt-[0%] aspect-[65/94] md:order-[3] md:w-[5.972%] md:ml-[-3.194%] md:mb-[0%] md:aspect-[86/125]">
+          <img src="images/editada8.webp" alt="book" decoding="async" class="block h-full w-full object-cover">
+        </li>
+        <li class="flex-none transition-transform duration-300 hover:!z-[40] hover:scale-[1.06] z-[3] order-[4] w-[22.646%] ml-[0.763%] mt-[0%] aspect-[89/93] md:order-[4] md:w-[8.125%] md:ml-[0%] md:mb-[0.069%] md:aspect-[117/124]">
+          <img src="images/editada7.webp" alt="book" decoding="async" class="block h-full w-full object-cover">
+        </li>
+        <li class="flex-none transition-transform duration-300 hover:!z-[40] hover:scale-[1.06] z-[4] hidden md:block md:order-[13] md:w-[6.319%] md:ml-[0.139%] md:mt-[0.069%] md:aspect-[91/123]">
+          <img src="images/editada6.webp" alt="book" decoding="async" class="block h-full w-full object-cover">
+        </li>
+        <li class="flex-none transition-transform duration-300 hover:!z-[40] hover:scale-[1.06] z-[6] order-[7] w-[14.758%] ml-[12.468%] mt-[29.262%] aspect-[58/86] md:order-[10] md:w-[7.917%] md:ml-[0%] md:mb-[-0.903%] md:aspect-[114/170]">
+          <img src="images/editada4.webp" alt="book" decoding="async" class="block h-full w-full object-cover">
+        </li>
+        <li class="flex-none transition-transform duration-300 hover:!z-[40] hover:scale-[1.06] z-[7] order-[8] w-[16.794%] ml-[-8.906%] mt-[43.511%] aspect-[66/100] md:order-[12] md:w-[6.042%] md:ml-[-1.528%] md:mb-[0.069%] md:aspect-[87/134]">
+          <img src="images/editada3.webp" alt="book" decoding="async" class="block h-full w-full object-cover">
+        </li>
+        <li class="flex-none transition-transform duration-300 hover:!z-[40] hover:scale-[1.06] z-[8] order-[9] w-[17.557%] ml-[-15.013%] mt-[0%] aspect-[69/107] md:order-[8] md:w-[6.389%] md:ml-[-1.875%] md:mb-[0.069%] md:aspect-[92/143]">
+          <img src="images/Captura de pantalla 2026-11-05 095441.png" alt="book" decoding="async" class="block h-full w-full object-cover">
+        </li>
+        <li class="flex-none transition-transform duration-300 hover:!z-[40] hover:scale-[1.2] z-[9] hidden md:block md:order-[7] md:w-[7.014%] md:ml-[-1.528%] md:mt-[7.986%] md:aspect-[101/142] md:translate-x-[11px] md:translate-y-[11px] scale-[1.1]">
+          <img src="images/revista_editada7.webp" alt="book" decoding="async" class="block h-full w-full object-cover">
+        </li>
+        <li class="flex-none transition-transform duration-300 hover:!z-[40] hover:scale-[1.06] z-[10] order-[10] w-[17.557%] ml-[-8.906%] mt-[66.158%] aspect-[69/108] md:order-[9] md:w-[6.389%] md:ml-[-2.569%] md:mt-[3.194%] md:aspect-[92/144]translate-y-[8vh] md:translate-y-[8vw] md:translate-x-[15px]">
+          <img src="images/revista_editada6.webp" alt="book" decoding="async" class="block h-full w-full object-cover">
+        </li>
+        <li class="flex-none transition-transform duration-300 hover:!z-[40] hover:scale-[1.06] z-[11] order-[5] w-[27.735%] ml-[-16.285%] mt-[19.338%] aspect-[109/176] md:order-[6] md:w-[10.069%] md:ml-[-3.264%] md:mt-[1.25%] md:aspect-[145/234]">
+          <img src="images/revista_editada5.webp" alt="book" decoding="async" class="block h-full w-full object-cover">
+        </li>
+        <li class="flex-none transition-transform duration-300 hover:!z-[40] hover:scale-[1.06] z-[12] order-[2] w-[20.865%] ml-[-14.504%] mt-[47.837%] aspect-[82/119] md:order-[2] md:w-[7.569%] md:ml-[-5.208%] md:mt-[9.583%] md:aspect-[109/158] translate-y-[10vh] md:translate-y-[5vw]">
+          <img src="images/revista_editada4.webp" alt="book" decoding="async" class="block h-full w-full object-cover">
+        </li>
+        <li class="flex-none transition-transform duration-300 hover:!z-[40] hover:scale-[2.1] z-[13] order-[6] w-[12.468%] ml-[-24.936%] mt-[66.158%] aspect-[49/72] md:order-[5] md:w-[4.514%] md:ml-[-6.319%] md:mt-[14.167%] md:aspect-[65/95] scale-[2]">
+          <img src="images/revista_editada3.webp" alt="book" decoding="async" class="block h-full w-full object-cover">
+        </li>
+         <li class="flex-none transition-transform duration-300 hover:!z-[40] hover:scale-[2.1] z-[13] order-[6] w-[12.468%] ml-[40%] mt-[80%] aspect-[49/72] md:order-[5] md:w-[4.514%] md:ml-[2%] md:mt-[20%] md:aspect-[65/95] translate-x-[20vw] translate-y-[10vh] scale-[2]">
+          <img src="images/revista editada9.png" alt="book" decoding="async" class="block h-full w-full object-cover">
+        </li>
+        <li class="flex-none transition-transform duration-300 hover:!z-[40] hover:scale-[1.06] z-[14] hidden md:block md:order-[14] md:w-[7.361%] md:ml-[-5.347%] md:mt-[9.028%] md:aspect-[106/155]">
+          <img src="images/revista_editada2.webp" alt="book" decoding="async" class="block h-full w-full object-cover">
+        </li>
+        <li class="flex-none transition-transform duration-300 hover:!z-[40] hover:scale-[2.1] z-[15] order-[11] scale-[2] w-[15.013%] mt-[10%] ml-[-10.433%] mb-[26.718%] aspect-[59/85] md:order-[11] md:w-[5.417%] md:ml-[0.556%] md:mb-[7.083%] md:aspect-[78/114]">
+          <img src="images/revista_editada1.webp" alt="book" decoding="async" class="block h-full w-full object-cover">
+        </li>
+        <li class="flex-none transition-transform duration-300 hover:!z-[40] hover:scale-[1.06] z-[16] hidden md:block md:order-[15] md:w-[7.917%] md:ml-[0%] md:mb-[6.875%] md:aspect-[114/141]">
+          <img src="images/editada9.webp" alt="book" decoding="async" class="block h-full w-full object-cover">
+        </li>
+        <li class="flex-none transition-transform duration-300 hover:!z-[40] hover:scale-[1.3] z-[16] hidden md:block md:order-[15] md:w-[10%] md:translate-x-[20px] md:translate-y-[50px] md:aspect-[250/300] scale-[1.2]">
+          <img src="images/revista editada10.png" alt="book" decoding="async" class="block h-full w-full object-cover">
+        </li>
+        <li class="flex-none transition-transform duration-300 hover:!z-[40] hover:scale-[1.3] z-[6] order-[7] w-[14.758%] ml-[12.468%] mt-[29.262%] aspect-[58/86] md:order-[10] md:w-[7.917%] md:ml-[0%] md:mb-[-0.903%] md:aspect-[114/170] translate-x-[10vw] md:translate-x-[10vw] scale-[1.2]">
+          <img src="images/revista editada11.png" alt="book" decoding="async" class="block h-full w-full object-cover">
+        </li>
+        <li class="absolute z-[6] w-[14.758%] aspect-[58/86] left-[2vw]  top-[30vh] md:top-[60vh] md:w-[7.917%] md:aspect-[114/170] md:left-[15vw] scale-[1.2] transition-transform duration-300 hover:!z-[40] hover:scale-[1.3]">
+          <img src="images/Captura de pantalla 2026-11-04 174356.png" alt="book" decoding="async" class="block h-full w-full object-cover">
+        </li>
+         <li class="absolute z-[6] w-[14.758%] aspect-[58/86] left-[4vw] top-[30vh] md:top-[60vh] md:w-[7.917%] md:aspect-[114/170] md:left-[2vw] scale-[1.2] transition-transform duration-300 hover:!z-[40] hover:scale-[1.3]">
+          <img src="images/Captura de pantalla 2026-11-04 174606.png" alt="book" decoding="async" class="block h-full w-full object-cover">
+        </li>
+         <li class="absolute z-[6] w-[14.758%] aspect-[58/86] left-[8vw] top-[40vh] md:top-[70vh] md:w-[7.917%] md:aspect-[114/170] md:left-[25vw] scale-[1.2] transition-transform duration-300 hover:!z-[40] hover:scale-[1.3]">
+          <img src="images/editada5.webp" alt="book" decoding="async" class="block h-full w-full object-cover">
+        </li>
+         <li class="absolute z-[6] w-[14.758%] aspect-[58/86] left-[9vw] top-[50vh] md:top-[90vh] md:w-[7.917%] md:aspect-[114/170] md:left-[8vw] scale-[1.2] transition-transform duration-300 hover:!z-[40] hover:scale-[1.3]">
+          <img src="images/revista editada12.png" alt="book" decoding="async" class="block h-full w-full object-cover">
+        </li>
+        <li class="absolute z-[6] w-[14.758%] aspect-[58/86] right-[9vw] top-[50vh] md:top-[90vh] md:w-[7.917%] md:aspect-[114/170] md:right-[4vw] scale-[1.2] transition-transform duration-300 hover:!z-[40] hover:scale-[1.3]">
+          <img src="images/Captura de pantalla 2026-11-04 174944.png" alt="book" decoding="async" class="block h-full w-full object-cover">
+        </li>
+        <li class="absolute z-[6] w-[14.758%] aspect-[58/86] right-[14vw] top-[50vh] md:top-[70vh] md:w-[7.917%] md:aspect-[114/170] md:right-[14vw] scale-[1] transition-transform duration-300 hover:!z-[40] hover:scale-[1.1]">
+          <img src="images/Captura de pantalla 2026-11-04 174922.png" alt="book" decoding="async" class="block h-full w-full object-cover">
+        </li>
+        <li class="absolute z-[6] w-[14.758%] aspect-[58/86] right-[16vw] top-[50vh] md:top-[70vh] md:w-[7.917%] md:aspect-[114/170] md:right-[38vw] scale-[1] transition-transform duration-300 hover:!z-[40] hover:scale-[1.1]">
+          <img src="images/revista editada8.png" alt="book" decoding="async" class="block h-full w-full object-cover">
+        </li>
+         <li class="absolute z-[6] w-[14.758%] aspect-[58/86] left-[16vw] top-[50vh] md:top-[90vh] md:w-[7.917%] md:aspect-[114/170] md:left-[38vw] scale-[1] transition-transform duration-300 hover:!z-[40] hover:scale-[1.1]">
+          <img src="images/revista1.png" alt="book" decoding="async" class="block h-full w-full object-cover">
+        </li>
+        <li class="absolute z-[6] w-[14.758%] aspect-[58/86] left-[10vw] top-[50vh] md:top-[97vh] md:w-[7.917%] md:aspect-[114/170] md:left-[24vw] scale-[1] transition-transform duration-300 hover:!z-[40] hover:scale-[1.1]">
+          <img src="images/revista2.png" alt="book" decoding="async" class="block h-full w-full object-cover">
+        </li>
+        <li class="absolute z-[6] w-[14.758%] aspect-[58/86] left-[14vw] top-[50vh] md:top-[110vh] md:w-[7.917%] md:aspect-[114/170] md:left-[55vw] scale-[1.5] transition-transform duration-300 hover:!z-[40] hover:scale-[1.6]">
+          <img src="images/revista6.png" alt="book" decoding="async" class="block h-full w-full object-cover">
+        </li>
+        <li class="absolute z-[6] w-[14.758%] aspect-[58/86] right-[4vw] top-[100vh] md:top-[105vh] md:w-[7.917%] md:aspect-[114/170] md:right-[13vw] scale-[1.5] transition-transform duration-300 hover:!z-[40] hover:scale-[1.6]">
+          <img src="images/revista5.png" alt="book" decoding="async" class="block h-full w-full object-cover">
+        </li>
+        <li class="absolute z-[6] w-[14.758%] aspect-[58/86] left-[4vw] top-[100vh] md:top-[120vh] md:w-[7.917%] md:aspect-[114/170] md:left-[13vw] scale-[1.5] transition-transform duration-300 hover:!z-[40] hover:scale-[1.6]">
+          <img src="images/revista4.png" alt="book" decoding="async" class="block h-full w-full object-cover">
+        </li>
+        <li class="absolute z-[6] w-[14.758%] aspect-[58/86] left-[14vw] top-[100vh] md:top-[120vh] md:w-[7.917%] md:aspect-[114/170] md:left-[35vw] scale-[1.3] transition-transform duration-300 hover:!z-[40] hover:scale-[1.4]">
+          <img src="images/revista3.png" alt="book" decoding="async" class="block h-full w-full object-cover">
+        </li>
+        <li class="absolute z-[6] w-[14.758%] aspect-[58/86] left-[14vw] top-[100vh] md:top-[130vh] md:w-[7.917%] md:aspect-[114/170] md:left-[50vw] scale-[1.3] transition-transform duration-300 hover:!z-[40] hover:scale-[1.4]">
+          <img src="images/Captura de pantalla 2026-11-05 095313.png" alt="book" decoding="async" class="block h-full w-full object-cover">
+        </li>
+        <li class="absolute z-[6] w-[14.758%] aspect-[58/86] right-[14vw] top-[100vh] md:top-[130vh] md:w-[7.917%] md:aspect-[114/170] md:right-[20vw] scale-[1] transition-transform duration-300 hover:!z-[40] hover:scale-[1.1]">
+          <img src="images/Captura de pantalla 2026-11-05 095613.png" alt="book" decoding="async" class="block h-full w-full object-cover">
+        </li>
+        <li class="absolute z-[6] w-[14.758%] aspect-[58/86] left-[4vw] top-[100vh] md:top-[140vh] md:w-[7.917%] md:aspect-[154/170] md:left-[5vw] scale-[1.5] transition-transform duration-300 hover:!z-[40] hover:scale-[1.6]">
+          <img src="images/Captura de pantalla 2026-11-05 095953.png" alt="book" decoding="async" class="block h-full w-full object-cover">
+        </li>
+        <li class="absolute z-[6] w-[14.758%] aspect-[58/86] left-[4vw] top-[100vh] md:top-[145vh] md:w-[7.917%] md:aspect-[154/170] md:left-[25vw] scale-[1.5] transition-transform duration-300 hover:!z-[40] hover:scale-[1.6]">
+          <img src="images/Captura de pantalla 2026-11-05 100146.png" alt="book" decoding="async" class="block h-full w-full object-cover">
+        </li>
+        <li class="absolute z-[6] w-[14.758%] aspect-[58/86] right-[14vw] top-[100vh] md:top-[145vh] md:w-[7.917%] md:aspect-[114/170] md:right-[33vw] scale-[1] transition-transform duration-300 hover:!z-[40] hover:scale-[1.1]">
+          <img src="images/Captura de pantalla 2026-11-05 100017.png" alt="book" decoding="async" class="block h-full w-full object-cover">
+        </li>
+        <li class="absolute z-[6] w-[14.758%] aspect-[58/86] right-[14vw] top-[100vh] md:top-[150vh] md:w-[7.917%] md:aspect-[120/170] md:right-[5vw] scale-[1.5] transition-transform duration-300 hover:!z-[40] hover:scale-[1.6]">
+          <img src="images/Captura de pantalla 2026-11-05 095653.png" alt="book" decoding="async" class="block h-full w-full object-cover">
+        </li>
+        <li class="absolute z-[6] w-[14.758%] aspect-[58/86] right-[14vw] top-[100vh] md:top-[155vh] md:w-[7.917%] md:aspect-[120/170] md:right-[22vw] scale-[1.1] transition-transform duration-300 hover:!z-[40] hover:scale-[1.2]">
+          <img src="images/Captura de pantalla 2026-11-05 095914.png" alt="book" decoding="async" class="block h-full w-full object-cover">
+        </li>
+        <li class="absolute z-[6] w-[14.758%] aspect-[58/86] left-[14vw] top-[100vh] md:top-[155vh] md:w-[7.917%] md:aspect-[120/170] md:left-[38vw] scale-[1.1] transition-transform duration-300 hover:!z-[40] hover:scale-[1.2]">
+          <img src="images/Captura de pantalla 2026-11-05 095724.png" alt="book" decoding="async" class="block h-full w-full object-cover">
+        </li>
+        <li class="absolute z-[6] w-[14.758%] aspect-[58/86] left-[14vw] top-[100vh] md:top-[155vh] md:w-[7.917%] md:aspect-[120/170] md:left-[38vw] scale-[1.1] transition-transform duration-300 hover:!z-[40] hover:scale-[1.2]">
+          <img src="images/Captura de pantalla 2026-11-05 095724.png" alt="book" decoding="async" class="block h-full w-full object-cover">
+        </li>
+        <li class="absolute z-[6] w-[14.758%] aspect-[58/86] left-[14vw] top-[100vh] md:top-[175vh] md:w-[7.917%] md:aspect-[120/170] md:left-[20vw] scale-[1.1] transition-transform duration-300 hover:!z-[40] hover:scale-[1.2]">
+          <img src="images/Captura de pantalla 2026-11-05 095411.png" alt="book" decoding="async" class="block h-full w-full object-cover">
+        </li>
+        <li class="absolute z-[6] w-[14.758%] aspect-[58/86] right-[14vw] top-[100vh] md:top-[182vh] md:w-[7.917%] md:aspect-[150/170] md:right-[15vw] scale-[1.5] transition-transform duration-300 hover:!z-[40] hover:scale-[1.6]">
+          <img src="images/Captura de pantalla 2026-11-05 095849.png" alt="book" decoding="async" class="block h-full w-full object-cover">
+        </li>
+        <li class="absolute z-[6] w-[14.758%] aspect-[58/86] left-[14vw] top-[100vh] md:top-[180vh] md:w-[7.917%] md:aspect-[120/170] md:left-[50vw] scale-[1.1] transition-transform duration-300 hover:!z-[40] hover:scale-[1.2]">
+          <img src="images/Captura de pantalla 2026-11-05 095821.png" alt="book" decoding="async" class="block h-full w-full object-cover">
+        </li>
+    </ul>
+
+    <section aria-label="Información de contacto" class="w-full border-t-[6px] border-filigrana bg-filigrana font-family: Helvetica, Arial, sans-serif">
+
+      <div class="grid grid-cols-1 gap-8 px-[3.4%] pt-2 pb-2 md:min-h-[0rem] md:grid-cols-[1.55fr_1.3fr_1fr] md:pt-4 md:pb-4">
+
+        <!-- Contacto -->
+        <div>
+          <h2 class="m-0 mb-1 text-[length:max(15px,1.5vw)] leading-[1.1] text-[#ff0000] md:mb-2 font-semibold">CONTÁCTANOS</h2>
+          <dl class="m-0 grid grid-cols-[max-content_1fr] gap-x-6 gap-y-1.5 text-[length:max(10px,.9vw)] leading-[1.35] md:gap-x-14 text-[#ffffff]">
+            <dt>REDES SOCIALES:</dt>
+            <dd class="m-0">Filigrana___</dd>
+            <dt>CORREO:</dt>
+            <dd class="m-0"><a href="mailto:Filigrana@gmail.com" class="hover:underline">Filigrana@gmail.com</a></dd>
+            <dt>TELÉFONO</dt>
+            <dd class="m-0"><a href="tel:+34680567613" class="hover:underline">+34 680 567 613</a></dd>
+          </dl>
+        </div>
+
+        <!-- Ubicación -->
+        <div>
+          <h2 class="m-0 mb-1 text-[length:max(15px,1.5vw)] leading-[1.1] text-[#ff0000] md:mb-2 font-semibold">UBICACIÓN</h2>
+          <address class="text-[length:max(10px,.9vw)] not-italic leading-[1.35] text-[#ffffff]">
+            CALLE VELÁZQUEZ, 211, CHAMARTÍN 28003<br>MADRID
+          </address>
+        </div>
+
+        <!-- Horario -->
+        <div>
+          <h2 class="m-0 mb-1 text-[length:max(15px,1.5vw)] leading-[1.1] text-[#ff0000] md:mb-2 font-semibold">HORARIO</h2>
+          <p class="m-0 text-[length:max(10px,.9vw)] leading-[1.35] text-[#ffffff]">
+            LUNES-VIERNES: 9:00-18:00<br>SÁBADOS:10:00-18:00<br>DOMINGOS CERRAMOS
+          </p>
+        </div>
+
+      </div>
+
+      <!-- Nombre gigante: el SVG se estira al ancho completo 
+      <svg viewBox="0 0 2576 262" preserveAspectRatio="none" role="img" aria-label="Librería Filigrana" class="mt-0 block aspect-[2576/262] h-auto w-full overflow-visible">
+        <rect x="0" y="57" width="2576" height="199" class="fill-filigrana"/>
+        <text x="0" y="252" font-size="261" textLength="2576" lengthAdjust="spacingAndGlyphs" fill="#ff0000" font-family="Helvetica, Arial, sans-serif">LIBRERÍA FILIGRANA</text>
+      </svg> -->
+
+    </section>
+
+    <script>
+  const texto = document.getElementById('texto-scroll');
+
+  function actualizarOpacidad() {
+  const recorrido = document.documentElement.scrollHeight - window.innerHeight;
+  const progreso = recorrido > 0 ? window.scrollY / recorrido : 0;
+
+  const inicioDesvanecido = 0.94;
+  const progresoDesvanecido = Math.max(
+    0,
+    Math.min(1, (progreso - inicioDesvanecido) / (1 - inicioDesvanecido))
+  );
+
+  texto.style.opacity = 1 - progresoDesvanecido;
+}
+
+  window.addEventListener('scroll', actualizarOpacidad, { passive: true });
+  actualizarOpacidad();
+</script>
+
+</body>
 </html>

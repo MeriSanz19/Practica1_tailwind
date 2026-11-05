@@ -1,0 +1,59 @@
+/* ============================================================
+   Filigrana · estilos propios (complementan a Tailwind)
+   El layout y la responsividad se resuelven con flexbox en index.html
+   ============================================================ */
+
+:root {
+  --filigrana-blue: #314bf4;
+  --ink: #000;
+  --paper: #fff;
+}
+
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  overflow-x: hidden;
+}
+
+/* Portadas: sombra suave al levantarlas con el hover */
+ul[aria-label="Libros y revistas destacados"] > li:hover {
+  filter: drop-shadow(0 6px 10px rgb(0 0 0 / 0.25));
+}
+
+.rain-layer {
+  position: fixed;
+  z-index: 50;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.rain-image {
+  position: absolute;
+  top: -18vh;
+  width: clamp(2.5rem, 5vw, 4.5rem);
+  height: auto;
+  filter: drop-shadow(0 3px 5px rgb(0 0 0 / 0.3));
+  animation: image-fall 16s linear infinite;
+}
+
+@keyframes image-fall {
+  0% { transform: translateY(0) rotate(0deg); }
+  35%, 100% { transform: translateY(125vh) rotate(360deg); }
+}
+
+/* Accesibilidad */
+a:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  li { transition: none !important; }
+  .rain-image { animation: none; }
+}

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Filigrana · Librería independiente</title>
+  <meta name="description" content="Filigrana es una pequeña librería independiente de barrio: arte, diseño gráfico, fotografía e ilustración.">
+
+  <!-- Fuente de la navegación -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://use.typekit.net/ooc3ruf.css">
+
+  <!-- Tailwind CSS (Play CDN) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { filigrana: '#314bf4' },
+          fontFamily: { inter: ['helvetica', 'system-ui', 'sans-serif'] },
+        },
+      },
+    };
+  </script>
+
+  <!-- Estilos propios -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body class="font-helvetica font-medium text-black" style="background-image: url('images/cielo-fondo.png'); background-size: cover; background-position: center; background-repeat: no-repeat; background-attachment: fixed;">
+
+  <!--
+    Hero responsive 100 % con flexbox.
+    · < md  (móvil)   → composición del frame "iPhone 16 - 4" de Figma
+    · ≥ md  (escritorio) → composición del frame "homepage oficial" (1440 × 659)
+    Las medidas son porcentajes del ancho del hero, así que todo escala en proporción.
+  -->
+  <div class="flex min-h-svh w-full flex-col overflow-hidden md:min-h-0">
+
+    <!-- HEAD / NAVBAR -->
+    <header class="fixed z-50 mt-[0px] h-[41px] w-full flex-none bg-filigrana md:mt-[0%] md:h-[max(41px,2.847vw)]">
+      <nav aria-label="Principal" class="flex h-full flex-row-reverse items-center justify-between px-3 md:flex-row md:pl-[3.125%] md:pr-[1.215%]">
+
+        <!-- Enlaces -->
+        <ul class="m-0 flex list-none items-center gap-[30px] p-0 md:gap-[10%]">
+          <li class="hidden md:block"><a href="index.html" class="whitespace-nowrap text-[15px] leading-none text-black transition-colors hover:text-red-600">FILIGRANA</a></li>
+          <li><a href="#" class="whitespace-nowrap text-[15px] leading-none text-black transition-colors hover:text-red-600">BOOKS</a></li>
+          <li><a href="about.html" class="whitespace-nowrap text-[15px] leading-none text-red-600">SOBRE NOSOTRAS</a></li>
+        </ul>
+
+        <!-- Icono "g": vuelve a la home -->
+        <a href="index.html" aria-label="Filigrana, volver a la home" class="flex h-full flex-none items-center">
+          <img src="images/logo-g.png" alt="Filigrana" class="block h-full w-auto">
+        </a>
+      </nav>
+    </header>
+
+    <main class="flex min-h-svh flex-1 items-center justify-center px-5 pt-[40px] md:px-8">
+      <section aria-labelledby="about-title" class="flex min-h-[20rem] w-full max-w-[48rem] flex-col bg-white px-3 pb-3 pt-4 text-left shadow-[0_16px_40px_rgba(0,0,0,0.42)] md:px-4 md:pb-4">
+        <p class="m-0 text-[12px] leading-relaxed">
+          Filigrana es una pequeña librería independiente de barrio, un proyecto que nace de las ganas de crear un espacio diferente, donde descubrir, compartir y dejarse llevar por la curiosidad. Un lugar para quienes disfrutan perdiéndose entre estanterías y encontrando libros que quizá no sabían que estaban buscando.
+
+Nos gusta explorar más allá de lo convencional. Por eso, nuestra selección reúne libros de arte, diseño gráfico, fotografía, ilustración y otras disciplinas creativas, junto a propuestas de editoriales independientes y autores emergentes que tienen mucho que contar. Nos interesan especialmente aquellas publicaciones que se salen de lo habitual, que experimentan, que inspiran y que invitan a mirar las cosas desde otra perspectiva.
+Creemos que los libros son mucho más que historias escritas entre dos tapas. Son objetos que se tocan, se hojean, se coleccionan y se comparten; pequeñas ventanas a otros mundos y formas de entender el nuestro. Por eso, cada libro que llega a Filigrana tiene algo que lo hace especial.
+
+Queremos que nuestra librería sea también un punto de encuentro, un espacio abierto a la creatividad, a las conversaciones espontáneas y a las personas inquietas que siempre buscan algo nuevo. Un rincón de barrio donde sentirse a gusto, descubrir nuevos autores y encontrar inspiración en los lugares más inesperados.
+        </p>
+        <h1 id="about-title" class="mb-0 mt-2 text-2xl text-filigrana md:text-6xl font-helvetica font-medium text-right">SOBRE NOSOTRAS</h1> 
+      </section>
+    </main>
+  </div>
+  <section aria-label="Información de contacto" class="w-full border-t-[6px] border-filigrana bg-filigrana font-family: Helvetica, Arial, sans-serif">
+
+      <div class="grid grid-cols-1 gap-8 px-[3.4%] pt-2 pb-2 md:min-h-[0rem] md:grid-cols-[1.55fr_1.3fr_1fr] md:pt-4 md:pb-4">
+
+        <!-- Contacto -->
+        <div>
+          <h2 class="m-0 mb-1 text-[length:max(15px,1.5vw)] leading-[1.1] text-[#ff0000] md:mb-2 font-semibold">CONTÁCTANOS</h2>
+          <dl class="m-0 grid grid-cols-[max-content_1fr] gap-x-6 gap-y-1.5 text-[length:max(10px,.9vw)] leading-[1.35] md:gap-x-14 text-[#ffffff]">
+            <dt>REDES SOCIALES:</dt>
+            <dd class="m-0">Filigrana___</dd>
+            <dt>CORREO:</dt>
+            <dd class="m-0"><a href="mailto:Filigrana@gmail.com" class="hover:underline">Filigrana@gmail.com</a></dd>
+            <dt>TELÉFONO</dt>
+            <dd class="m-0"><a href="tel:+34680567613" class="hover:underline">+34 680 567 613</a></dd>
+          </dl>
+        </div>
+
+        <!-- Ubicación -->
+        <div>
+          <h2 class="m-0 mb-1 text-[length:max(15px,1.5vw)] leading-[1.1] text-[#ff0000] md:mb-2 font-semibold">UBICACIÓN</h2>
+          <address class="text-[length:max(10px,.9vw)] not-italic leading-[1.35] text-[#ffffff]">
+            CALLE VELÁZQUEZ, 211, CHAMARTÍN 28003<br>MADRID
+          </address>
+        </div>
+
+        <!-- Horario -->
+        <div>
+          <h2 class="m-0 mb-1 text-[length:max(15px,1.5vw)] leading-[1.1] text-[#ff0000] md:mb-2 font-semibold">HORARIO</h2>
+          <p class="m-0 text-[length:max(10px,.9vw)] leading-[1.35] text-[#ffffff]">
+            LUNES-VIERNES: 9:00-18:00<br>SÁBADOS:10:00-18:00<br>DOMINGOS CERRAMOS
+          </p>
+        </div>
+      <!-- Lluvia decorativa de portadas -->
+      <div class="rain-layer" aria-hidden="true">
+        <img src="images/revista1.png" alt="" class="rain-image" style="left: 1%; animation-delay: -5s; animation-duration: 16s;">
+        <img src="images/revista2.png" alt="" class="rain-image" style="left: 10%; animation-delay: -5s; animation-duration: 9s;">
+        <img src="images/revista3.png" alt="" class="rain-image" style="left: 9%; animation-delay: -3s; animation-duration: 7s;">
+        <img src="images/revista4.png" alt="" class="rain-image" style="left: 70%; animation-delay: -7s; animation-duration: 10s;">
+        <img src="images/revista5.png" alt="" class="rain-image" style="left: 80%; animation-delay: -2s; animation-duration: 8s;">
+        <img src="images/revista6.png" alt="" class="rain-image" style="left: 87%; animation-delay: -6s; animation-duration: 9s;">
+        <img src="images/editada7.webp" alt="" class="rain-image" style="left: 97%; animation-delay: -4s; animation-duration: 7s;">
+        <img src="images/editada6.webp" alt="" class="rain-image" style="left: 90%; animation-delay: -20s; animation-duration: 18s;">
+        <img src="images/editada5.webp" alt="" class="rain-image" style="left: 5%; animation-delay: -20s; animation-duration: 18s;">
+        <img src="images/Captura de pantalla 2026-11-05 095653.png " alt="" class="rain-image" style="left: 10%; animation-delay: -10s; animation-duration: 14s;">
+        <img src="images/revista editada10.png " alt="" class="rain-image" style="left: 70%; animation-delay: -10s; animation-duration: 14s;">
+      </div>
+      </div>
+</body>
