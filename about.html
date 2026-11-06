@@ -6,13 +6,13 @@
   <title>Filigrana · Librería independiente</title>
   <meta name="description" content="Filigrana es una pequeña librería independiente de barrio: arte, diseño gráfico, fotografía e ilustración.">
 
-  <!-- Fuente de la navegación -->
+  
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://use.typekit.net/ooc3ruf.css">
 
-  <!-- Tailwind CSS (Play CDN) -->
+  
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -28,25 +28,20 @@
     };
   </script>
 
-  <!-- Estilos propios -->
+  
   <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body class="about-page bg-white font-helvetica font-medium text-black dark:bg-black dark:text-white">
 
-  <!--
-    Hero responsive 100 % con flexbox.
-    · < md  (móvil)   → composición del frame "iPhone 16 - 4" de Figma
-    · ≥ md  (escritorio) → composición del frame "homepage oficial" (1440 × 659)
-    Las medidas son porcentajes del ancho del hero, así que todo escala en proporción.
-  -->
+  
   <div class="flex min-h-svh w-full flex-col overflow-hidden md:min-h-0">
 
-    <!-- HEAD / NAVBAR -->
+    
     <header class="fixed z-50 mt-[0px] h-[41px] w-full flex-none bg-filigrana md:mt-[0%] md:h-[max(41px,2.847vw)]">
       <nav aria-label="Principal" class="flex h-full flex-row-reverse items-center justify-between px-3 md:flex-row md:pl-[3.125%] md:pr-[1.215%]">
 
-        <!-- Enlaces -->
+        
         <ul id="primary-menu" class="site-nav-links m-0 flex list-none items-center gap-[30px] p-0 md:gap-[10%]">
           <li><a href="index.html" class="whitespace-nowrap text-[15px] leading-none text-black transition-colors hover:text-red-600">FILIGRANA</a></li>
           <li><a href="libreria.html" class="whitespace-nowrap text-[15px] leading-none text-black transition-colors hover:text-red-600">LIBROS</a></li>
@@ -55,7 +50,7 @@
 
         <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Activar modo oscuro" aria-pressed="false"><img src="images/luz.png" alt=""></button>
 
-        <!-- Icono "g": vuelve a la home -->
+        
         <a id="navbar-logo" href="index.html" aria-label="Filigrana, volver a la home" aria-expanded="false" aria-controls="primary-menu" class="flex h-full flex-none items-center">
           <img src="images/logo-g.png" alt="Filigrana" class="block h-full w-auto">
         </a>
@@ -87,7 +82,7 @@
 
       <div class="footer-grid grid grid-cols-1 gap-8 px-[3.4%] pt-2 pb-2 md:min-h-[0rem] md:grid-cols-[1.55fr_1.3fr_1fr] md:pt-4 md:pb-4">
 
-        <!-- Contacto -->
+        
         <div>
           <h2 class="m-0 mb-1 text-[length:max(15px,1.5vw)] leading-[1.1] text-[#ff0000] md:mb-2 font-semibold">CONTÁCTANOS</h2>
           <dl class="m-0 grid grid-cols-[max-content_1fr] gap-x-6 gap-y-1.5 text-[length:max(10px,.9vw)] leading-[1.35] md:gap-x-14 text-[#ffffff]">
@@ -100,7 +95,7 @@
           </dl>
         </div>
 
-        <!-- Ubicación -->
+        
         <div>
           <h2 class="m-0 mb-1 text-[length:max(15px,1.5vw)] leading-[1.1] text-[#ff0000] md:mb-2 font-semibold">UBICACIÓN</h2>
           <address class="text-[length:max(10px,.9vw)] not-italic leading-[1.35] text-[#ffffff]">
@@ -108,14 +103,14 @@
           </address>
         </div>
 
-        <!-- Horario -->
+        
         <div>
           <h2 class="m-0 mb-1 text-[length:max(15px,1.5vw)] leading-[1.1] text-[#ff0000] md:mb-2 font-semibold">HORARIO</h2>
           <p class="m-0 text-[length:max(10px,.9vw)] leading-[1.35] text-[#ffffff]">
             LUNES-VIERNES: 9:00-18:00<br>SÁBADOS:10:00-18:00<br>DOMINGOS CERRAMOS
           </p>
         </div>
-      <!-- Lluvia decorativa de portadas -->
+      
       <div class="rain-layer" aria-hidden="true">
         <img src="images/revista1.png" alt="" class="rain-image" style="left: 1%; animation-delay: -5s; animation-duration: 16s;">
         <img src="images/revista2.png" alt="" class="rain-image" style="left: 10%; animation-delay: -5s; animation-duration: 9s;">
