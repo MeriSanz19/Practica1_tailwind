@@ -5,39 +5,54 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Filigrana · Librería independiente</title>
   <meta name="description" content="Filigrana es una pequeña librería independiente de barrio: arte, diseño gráfico, fotografía e ilustración.">
-
-  <!-- Fuente de la navegación -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://use.typekit.net/ooc3ruf.css">
+  <link rel="stylesheet" href="https://use.typekit.net/ooc3ruf.css">
 
-  <!-- Tailwind CSS (Play CDN) -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <body class="font-helvetica font-medium text-black"
-  >
-    <!-- HEAD / NAVBAR -->
-    <header class="fixed z-50 mt-[27px] h-[41px] w-full flex-none bg-blue-600 md:mt-[1.875%] md:h-[max(41px,2.847vw)]">
-      <nav aria-label="Principal" class="flex h-full flex-row-reverse items-center justify-between px-3 md:flex-row md:pl-[3.125%] md:pr-[1.215%]">
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: { filigrana: '#314bf4',
+            rojo: '#ff0000',
+           },
+          fontFamily: { inter: ['helvetica', 'system-ui', 'sans-serif'] },
+        },
+      },
+    };
+  </script>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
 
-        <!-- Enlaces -->
-        <ul class="m-0 flex list-none items-center gap-[30px] p-0 md:gap-[10%]">
-          <li class="hidden md:block"><a href="#" class="whitespace-nowrap text-[15px] leading-none text-black transition-colors hover:text-red-600">FILIGRANA</a></li>
-          <li><a href="#" class="whitespace-nowrap text-[15px] leading-none text-black transition-colors hover:text-red-600">BOOKS</a></li>
-          <li><a href="#" class="whitespace-nowrap text-[15px] leading-none text-black transition-colors hover:text-red-600">SOBRE NOSOTRAS</a></li>
-        </ul>
 
-        <!-- Icono "g": vuelve a la home -->
-        <a href="index.html" aria-label="Filigrana, volver a la home" class="flex h-full flex-none items-center">
-          <img src="imagenes/Mesa de trabajo 2 copia.png" alt="Filigrana" class="block h-full w-auto">
-        </a>
-      </nav>
-    </header>
+  <body class="index-page bg-transparent font-helvetica font-medium text-black dark:bg-black dark:text-white">
+
+    <div class="flex min-h-svh w-full flex-col overflow-hidden bg-white dark:bg-black md:min-h-0">
+
+      <header class="fixed z-50 mt-[0px] h-[41px] w-full flex-none bg-filigrana md:mt-[0%] md:h-[max(41px,2.847vw)]">
+        <nav aria-label="Principal" class="flex h-full flex-row-reverse items-center justify-between px-3 md:flex-row md:pl-[3.125%] md:pr-[1.215%]">
+
+          <ul id="primary-menu" class="site-nav-links m-0 flex list-none items-center gap-[30px] p-0 md:gap-[10%]">
+            <li><a href="index.html" class="whitespace-nowrap text-[15px] leading-none text-black transition-colors hover:text-red-600">FILIGRANA</a></li>
+            <li><a href="libreria.html" aria-current="page" class="whitespace-nowrap text-[15px] leading-none text-red-600">LIBROS</a></li>
+            <li><a href="about.html" class="whitespace-nowrap text-[15px] leading-none text-black transition-colors hover:text-red-600">SOBRE NOSOTRAS</a></li>
+          </ul>
+
+          <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Activar modo oscuro" aria-pressed="false"><img src="images/luz.png" alt=""></button>
+
+          <a id="navbar-logo" href="index.html" aria-label="Filigrana, volver a la home" aria-expanded="false" aria-controls="primary-menu" class="flex h-full flex-none items-center">
+            <img src="imagenes/logo-g.png" alt="Filigrana" class="block h-full w-auto">
+          </a>
+        </nav>
+      </header>
 
     <section class="pt-15 md:pt-20">
-  <h2 class="mb-6 px-4 text-lg uppercase md:px-10 lg:px-16 text-red-600">
+    <h2 class="mb-6 px-4 text-lg uppercase md:px-10 lg:px-16 text-red-600">
     Bestsellers
-  </h2>
+    </h2>
 
     <div class="flex items-end gap-2 overflow-x-auto px-4 md:px-10 lg:px-16 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
 
@@ -164,7 +179,7 @@
 
     <article data-libro data-open="false" class="group relative aspect-[2/3] cursor-pointer overflow-hidden">
       <img src="imagenes/catalogo/revista1.png" class="h-full w-full object-cover">
-      <div class="absolute inset-0 flex flex-col justify-center bg-[#e63b2e] p-4 text-sm text-white opacity-0 transition-opacity duration-300 group-data-[open=true]:opacity-100 md:group-hover:opacity-100">
+      <div class="absolute inset-0 flex flex-col justify-center bg-red-600 p-4 text-sm text-white opacity-0 transition-opacity duration-300 group-data-[open=true]:opacity-100 md:group-hover:opacity-100">
         <h3 class="mb-2 font-bold uppercase">Interview 563</h3>
         <p class="font-light">Jeremy Allen White.</p>
       </div>
@@ -172,7 +187,7 @@
 
     <article data-libro data-open="false" class="group relative aspect-[2/3] cursor-pointer overflow-hidden">
       <img src="imagenes/catalogo/libro2.jpg" class="h-full w-full object-cover">
-      <div class="absolute inset-0 flex flex-col justify-center bg-[#2b59ff] p-4 text-sm text-white opacity-0 transition-opacity duration-300 group-data-[open=true]:opacity-100 md:group-hover:opacity-100">
+      <div class="absolute inset-0 flex flex-col justify-center bg-filigrana p-4 text-sm text-white opacity-0 transition-opacity duration-300 group-data-[open=true]:opacity-100 md:group-hover:opacity-100">
         <h3 class="mb-2 font-bold uppercase">Barragán: His Library</h3>
         <p class="font-light">La biblioteca de Luis Barragán en su casa de Ciudad de México.</p>
       </div>
@@ -180,7 +195,7 @@
 
     <article data-libro data-open="false" class="group relative aspect-[2/3] cursor-pointer overflow-hidden">
       <img src="imagenes/catalogo/revista3.png" class="h-full w-full object-cover">
-      <div class="absolute inset-0 flex flex-col justify-center bg-[#f2b705] p-4 text-sm text-white opacity-0 transition-opacity duration-300 group-data-[open=true]:opacity-100 md:group-hover:opacity-100">
+      <div class="absolute inset-0 flex flex-col justify-center bg-amber-400 p-4 text-sm text-white opacity-0 transition-opacity duration-300 group-data-[open=true]:opacity-100 md:group-hover:opacity-100">
         <h3 class="mb-2 font-bold uppercase">Elephant 30</h3>
         <p class="font-light">Apps y copyright.</p>
       </div>
@@ -188,7 +203,7 @@
 
     <article data-libro data-open="false" class="group relative aspect-[2/3] cursor-pointer overflow-hidden">
       <img src="imagenes/catalogo/libro6.png" class="h-full w-full object-cover">
-      <div class="absolute inset-0 flex flex-col justify-center bg-[#1f9d55] p-4 text-sm text-white opacity-0 transition-opacity duration-300 group-data-[open=true]:opacity-100 md:group-hover:opacity-100">
+      <div class="absolute inset-0 flex flex-col justify-center bg-green-600 p-4 text-sm text-white opacity-0 transition-opacity duration-300 group-data-[open=true]:opacity-100 md:group-hover:opacity-100">
         <h3 class="mb-2 font-bold uppercase">Arnold</h3>
         <p class="font-light"> La trayectoria de Arnold Schwarzenegger, del culturismo al cine y a la política.</p>
       </div>
@@ -196,7 +211,7 @@
 
     <article data-libro data-open="false" class="group relative aspect-[2/3] cursor-pointer overflow-hidden">
       <img src="imagenes/catalogo/revista5.png" class="h-full w-full object-cover">
-      <div class="absolute inset-0 flex flex-col justify-center bg-[#d946ef] p-4 text-sm text-white opacity-0 transition-opacity duration-300 group-data-[open=true]:opacity-100 md:group-hover:opacity-100">
+      <div class="absolute inset-0 flex flex-col justify-center bg-fuchsia-500 p-4 text-sm text-white opacity-0 transition-opacity duration-300 group-data-[open=true]:opacity-100 md:group-hover:opacity-100">
         <h3 class="mb-2 font-bold uppercase">Elephant 40</h3>
         <p class="font-light">Diez años de la revista</p>
       </div>
@@ -204,7 +219,7 @@
 
     <article data-libro data-open="false" class="group relative aspect-[2/3] cursor-pointer overflow-hidden">
       <img src="imagenes/catalogo/revista6.png" class="h-full w-full object-cover">
-      <div class="absolute inset-0 flex flex-col justify-center bg-[#f97316] p-4 text-sm text-white opacity-0 transition-opacity duration-300 group-data-[open=true]:opacity-100 md:group-hover:opacity-100">
+      <div class="absolute inset-0 flex flex-col justify-center bg-orange-500 p-4 text-sm text-white opacity-0 transition-opacity duration-300 group-data-[open=true]:opacity-100 md:group-hover:opacity-100">
         <h3 class="mb-2 font-bold uppercase">Elephant 41</h3>
         <p class="font-light">Lo doméstico y lo salvaje.</p>
       </div>
@@ -212,7 +227,7 @@
 
     <article data-libro data-open="false" class="group relative aspect-[2/3] cursor-pointer overflow-hidden">
       <img src="imagenes/catalogo/revista7.png" class="h-full w-full object-cover">
-      <div class="absolute inset-0 flex flex-col justify-center bg-[#e63b2e] p-4 text-sm text-white opacity-0 transition-opacity duration-300 group-data-[open=true]:opacity-100 md:group-hover:opacity-100">
+      <div class="absolute inset-0 flex flex-col justify-center bg-red-600 p-4 text-sm text-white opacity-0 transition-opacity duration-300 group-data-[open=true]:opacity-100 md:group-hover:opacity-100">
         <h3 class="mb-2 font-bold uppercase">cara 04</h3>
         <p class="font-light">El último número.</p>
       </div>
@@ -220,7 +235,7 @@
 
     <article data-libro data-open="false" class="group relative aspect-[2/3] cursor-pointer overflow-hidden">
       <img src="imagenes/catalogo/libro1.jpg" class="h-full w-full object-cover">
-      <div class="absolute inset-0 flex flex-col justify-center bg-[#2b59ff] p-4 text-sm text-white opacity-0 transition-opacity duration-300 group-data-[open=true]:opacity-100 md:group-hover:opacity-100">
+      <div class="absolute inset-0 flex flex-col justify-center bg-filigrana p-4 text-sm text-white opacity-0 transition-opacity duration-300 group-data-[open=true]:opacity-100 md:group-hover:opacity-100">
         <h3 class="mb-2 font-bold uppercase">Pepita</h3>
         <p class="font-light">Vita Sackville-West. La vida de su abuela, la bailarina española Pepita.</p>
       </div>
@@ -228,7 +243,7 @@
 
     <article data-libro data-open="false" class="group relative aspect-[2/3] cursor-pointer overflow-hidden">
       <img src="imagenes/catalogo/libro4.jpg" class="h-full w-full object-cover">
-      <div class="absolute inset-0 flex flex-col justify-center bg-[#f2b705] p-4 text-sm text-white opacity-0 transition-opacity duration-300 group-data-[open=true]:opacity-100 md:group-hover:opacity-100">
+      <div class="absolute inset-0 flex flex-col justify-center bg-amber-400 p-4 text-sm text-white opacity-0 transition-opacity duration-300 group-data-[open=true]:opacity-100 md:group-hover:opacity-100">
         <h3 class="mb-2 font-bold uppercase">Sex</h3>
         <p class="font-light">Madonna. El libro de fotos de 1992. Esta es la edición japonesa, con el single de Erotica.</p>
       </div>
@@ -236,7 +251,7 @@
 
     <article data-libro data-open="false" class="group relative aspect-[2/3] cursor-pointer overflow-hidden">
       <img src="imagenes/catalogo/revista editada10.png" class="h-full w-full object-cover">
-      <div class="absolute inset-0 flex flex-col justify-center bg-[#1f9d55] p-4 text-sm text-white opacity-0 transition-opacity duration-300 group-data-[open=true]:opacity-100 md:group-hover:opacity-100">
+      <div class="absolute inset-0 flex flex-col justify-center bg-green-600 p-4 text-sm text-white opacity-0 transition-opacity duration-300 group-data-[open=true]:opacity-100 md:group-hover:opacity-100">
       <h3 class="mb-2 uppercase">Colors 29</h3>
       <p class="font-light">Juguetes.</p>
       </div>
@@ -244,7 +259,7 @@
 
     <article data-libro data-open="false" class="group relative aspect-[2/3] cursor-pointer overflow-hidden">
       <img src="imagenes/catalogo/libro5.png" class="h-full w-full object-cover">
-      <div class="absolute inset-0 flex flex-col justify-center bg-[#d946ef] p-4 text-sm text-white opacity-0 transition-opacity duration-300 group-data-[open=true]:opacity-100 md:group-hover:opacity-100">
+      <div class="absolute inset-0 flex flex-col justify-center bg-fuchsia-500 p-4 text-sm text-white opacity-0 transition-opacity duration-300 group-data-[open=true]:opacity-100 md:group-hover:opacity-100">
       <h3 class="mb-2 font-bold uppercase">Freud</h3>
       <p class="font-light">La pintura de Lucian Freud, del cuadro de la cebra a los retratos. Sebastian Smee.</p>
       </div>
@@ -252,7 +267,7 @@
 
     <article data-libro data-open="false" class="group relative aspect-[2/3] cursor-pointer overflow-hidden">
       <img src="imagenes/catalogo/revista editada9.png" class="h-full w-full object-cover">
-      <div class="absolute inset-0 flex flex-col justify-center bg-[#f97316] p-4 text-sm text-white opacity-0 transition-opacity duration-300 group-data-[open=true]:opacity-100 md:group-hover:opacity-100">
+      <div class="absolute inset-0 flex flex-col justify-center bg-orange-500 p-4 text-sm text-white opacity-0 transition-opacity duration-300 group-data-[open=true]:opacity-100 md:group-hover:opacity-100">
       <h3 class="mb-2 font-bold uppercase">Colors 7.</h3>
       <p class="font-light"> Sobre AIDS</p>
       </div>
@@ -260,7 +275,7 @@
 
     <article data-libro data-open="false" class="group relative aspect-[2/3] cursor-pointer overflow-hidden">
       <img src="imagenes/catalogo/libro7.png" class="h-full w-full object-cover">
-      <div class="absolute inset-0 flex flex-col justify-center bg-[#e63b2e] p-4 text-sm text-white opacity-0 transition-opacity duration-300 group-data-[open=true]:opacity-100 md:group-hover:opacity-100">
+      <div class="absolute inset-0 flex flex-col justify-center bg-red-600 p-4 text-sm text-white opacity-0 transition-opacity duration-300 group-data-[open=true]:opacity-100 md:group-hover:opacity-100">
         <h3 class="mb-2 font-bold uppercase">Extraordinary Records</h3>
         <p class="font-light">Discos de vinilo raros, únicos o casi imposibles de encontrar.</p>
       </div>
@@ -268,7 +283,7 @@
 
     <article data-libro data-open="false" class="group relative aspect-[2/3] cursor-pointer overflow-hidden">
       <img src="imagenes/catalogo/revista editada11.png" class="h-full w-full object-cover">
-      <div class="absolute inset-0 flex flex-col justify-center bg-[#2b59ff] p-4 text-sm text-white opacity-0 transition-opacity duration-300 group-data-[open=true]:opacity-100 md:group-hover:opacity-100">
+      <div class="absolute inset-0 flex flex-col justify-center bg-filigrana p-4 text-sm text-white opacity-0 transition-opacity duration-300 group-data-[open=true]:opacity-100 md:group-hover:opacity-100">
         <h3 class="mb-2 font-bold uppercase">Colors 40</h3>
         <p class="font-light">Basura.</p>
       </div>
@@ -276,7 +291,7 @@
 
     <article data-libro data-open="false" class="group relative aspect-[2/3] cursor-pointer overflow-hidden">
       <img src="imagenes/catalogo/revista editada8.png" class="h-full w-full object-cover">
-      <div class="absolute inset-0 flex flex-col justify-center bg-[#f2b705] p-4 text-sm text-white opacity-0 transition-opacity duration-300 group-data-[open=true]:opacity-100 md:group-hover:opacity-100">
+      <div class="absolute inset-0 flex flex-col justify-center bg-amber-400 p-4 text-sm text-white opacity-0 transition-opacity duration-300 group-data-[open=true]:opacity-100 md:group-hover:opacity-100">
         <h3 class="mb-2 font-bold uppercase">032c 49</h3>
         <p class="font-light">Florentina Holzinger, por Juergen Teller</p>
       </div>
@@ -284,7 +299,7 @@
 
     <article data-libro data-open="false" class="group relative aspect-[2/3] cursor-pointer overflow-hidden">
       <img src="imagenes/catalogo/revista editada12.png" class="h-full w-full object-cover">
-      <div class="absolute inset-0 flex flex-col justify-center bg-[#1f9d55] p-4 text-sm text-white opacity-0 transition-opacity duration-300 group-data-[open=true]:opacity-100 md:group-hover:opacity-100">
+      <div class="absolute inset-0 flex flex-col justify-center bg-green-600 p-4 text-sm text-white opacity-0 transition-opacity duration-300 group-data-[open=true]:opacity-100 md:group-hover:opacity-100">
         <h3 class="mb-2 font-bold uppercase">Colors</h3>
         <p class="font-light">Mirando al arte</p>
       </div>
@@ -292,7 +307,7 @@
 
     <article data-libro data-open="false" class="group relative aspect-[2/3] cursor-pointer overflow-hidden">
       <img src="imagenes/catalogo/libro3.jpg" class="h-full w-full object-cover">
-      <div class="absolute inset-0 flex flex-col justify-center bg-[#d946ef] p-4 text-sm text-white opacity-0 transition-opacity duration-300 group-data-[open=true]:opacity-100 md:group-hover:opacity-100">
+      <div class="absolute inset-0 flex flex-col justify-center bg-fuchsia-500 p-4 text-sm text-white opacity-0 transition-opacity duration-300 group-data-[open=true]:opacity-100 md:group-hover:opacity-100">
         <h3 class="mb-2 font-bold uppercase">Imperial courts</h3>
         <p class="font-light">Dana Lixenberg. Retrato del barrio mperial Courts, en Watts, a lo largo de veinte años.</p>
       </div>
@@ -300,7 +315,7 @@
 
     <article data-libro data-open="false" class="group relative aspect-[2/3] cursor-pointer overflow-hidden">
       <img src="imagenes/catalogo/libro 9.png" class="h-full w-full object-cover">
-      <div class="absolute inset-0 flex flex-col justify-center bg-[#f97316] p-4 text-sm text-white opacity-0 transition-opacity duration-300 group-data-[open=true]:opacity-100 md:group-hover:opacity-100">
+      <div class="absolute inset-0 flex flex-col justify-center bg-orange-500 p-4 text-sm text-white opacity-0 transition-opacity duration-300 group-data-[open=true]:opacity-100 md:group-hover:opacity-100">
         <h3 class="mb-2 font-bold uppercase">Basquiat</h3>
         <p class="font-light">La obra de Jean-Michel Basquiat.</p>
       </div>
@@ -308,7 +323,7 @@
 
     <article data-libro data-open="false" class="group relative aspect-[2/3] cursor-pointer overflow-hidden">
       <img src="imagenes/catalogo/libro 8.png" class="h-full w-full object-cover">
-      <div class="absolute inset-0 flex flex-col justify-center bg-[#e63b2e] p-4 text-sm text-white opacity-0 transition-opacity duration-300 group-data-[open=true]:opacity-100 md:group-hover:opacity-100">
+      <div class="absolute inset-0 flex flex-col justify-center bg-red-600 p-4 text-sm text-white opacity-0 transition-opacity duration-300 group-data-[open=true]:opacity-100 md:group-hover:opacity-100">
         <h3 class="mb-2 font-bold uppercase">Los archivos personales de Stanley Kubrick</h3>
         <p class="font-light">Fotos, notas y documentos de sus películas, editados por Alison Castle.</p>
       </div>
@@ -316,7 +331,7 @@
 
     <article data-libro data-open="false" class="group relative aspect-[2/3] cursor-pointer overflow-hidden">
       <img src="imagenes/catalogo/revista4.png" class="h-full w-full object-cover">
-      <div class="absolute inset-0 flex flex-col justify-center bg-[#2b59ff] p-4 text-sm text-white opacity-0 transition-opacity duration-300 group-data-[open=true]:opacity-100 md:group-hover:opacity-100">
+      <div class="absolute inset-0 flex flex-col justify-center bg-filigrana p-4 text-sm text-white opacity-0 transition-opacity duration-300 group-data-[open=true]:opacity-100 md:group-hover:opacity-100">
         <h3 class="mb-2 font-bold uppercase">Elephant 33</h3>
         <p class="font-light">El humor en el arte.</p>
       </div>
@@ -336,9 +351,7 @@
         t.dataset.open = abrir ? 'true' : 'false';
       });
     });
-  </script>
-
-      <script>
+    
     const lomos = document.querySelectorAll('[data-lomo]');
     const conHover = window.matchMedia('(hover: hover)').matches;
 
@@ -347,8 +360,8 @@
     const lomo = l.querySelector('[data-spine]');
     const portada = l.querySelector('img:not([data-spine])');
     const anchoLomo = lomo.offsetWidth;
-    l.style.width = anchoLomo + 'px'; // punto de partida
-    l.offsetWidth; // fuerza al navegador a registrarlo
+    l.style.width = anchoLomo + 'px'; 
+    l.offsetWidth;
     portada.style.left = anchoLomo + 'px';
     l.style.width = anchoLomo + portada.offsetWidth + 'px';
     l.dataset.open = 'true';
@@ -375,6 +388,54 @@
         });
       }
     });
+
+    const primaryMenu = document.getElementById('primary-menu');
+  const navbarLogo = document.getElementById('navbar-logo');
+
+  function closeMenu() {
+    document.body.classList.remove('mobile-nav-open');
+    navbarLogo.setAttribute('aria-expanded', 'false');
+  }
+
+  function toggleMenu() {
+    const isOpen = document.body.classList.toggle('mobile-nav-open');
+    navbarLogo.setAttribute('aria-expanded', String(isOpen));
+  }
+
+  navbarLogo.addEventListener('click', (event) => {
+    if (window.innerWidth < 768) {
+      event.preventDefault();
+      toggleMenu();
+    }
+  });
+
+  primaryMenu.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', closeMenu);
+  });
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') closeMenu();
+  });
+
+  window.addEventListener('resize', () => {
+    if (window.innerWidth >= 768) closeMenu();
+  });
+
+  const themeToggle = document.getElementById('theme-toggle');
+  const savedTheme = localStorage.getItem('filigrana-theme');
+  const isDarkMode = savedTheme === 'dark';
+  document.documentElement.classList.toggle('dark', isDarkMode);
+  themeToggle.setAttribute('aria-pressed', String(isDarkMode));
+  themeToggle.setAttribute('aria-label', isDarkMode ? 'Activar modo claro' : 'Activar modo oscuro');
+  themeToggle.querySelector('img').src = isDarkMode ? 'images/noche.png' : 'images/luz.png';
+
+  themeToggle.addEventListener('click', () => {
+    const isDark = document.documentElement.classList.toggle('dark');
+    localStorage.setItem('filigrana-theme', isDark ? 'dark' : 'light');
+    themeToggle.setAttribute('aria-pressed', String(isDark));
+    themeToggle.setAttribute('aria-label', isDark ? 'Activar modo claro' : 'Activar modo oscuro');
+    themeToggle.querySelector('img').src = isDark ? 'images/noche.png' : 'images/luz.png';
+  });
 </script>
     </main>
   </body>
