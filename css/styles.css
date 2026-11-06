@@ -1,7 +1,3 @@
-/* ============================================================
-   Filigrana · estilos propios (complementan a Tailwind)
-   El layout y la responsividad se resuelven con flexbox en index.html
-   ============================================================ */
 
 :root {
   --filigrana-blue: #314bf4;
@@ -32,7 +28,19 @@ body.about-page {
 }
 
 html.dark body.about-page {
-  background-image: url("../images/noche-fondo.png");
+  background-image: url("../images/noche-fondo2.png");
+}
+
+body.libreria-page {
+  background-image: url("../images/cielo-fondo.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+html.dark body.libreria-page {
+  background-image: url("../images/noche-fondo2.png");
 }
 
 .theme-toggle {

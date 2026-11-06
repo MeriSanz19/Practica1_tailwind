@@ -6,13 +6,13 @@
   <title>Filigrana · Librería independiente</title>
   <meta name="description" content="Filigrana es una pequeña librería independiente de barrio: arte, diseño gráfico, fotografía e ilustración.">
 
-  <!-- Fuente de la navegación -->
+  
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://use.typekit.net/ooc3ruf.css">
 
-  <!-- Tailwind CSS (Play CDN) -->
+  
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -28,25 +28,20 @@
     };
   </script>
 
-  <!-- Estilos propios -->
+  
   <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body class="index-page bg-transparent font-helvetica font-medium text-black dark:bg-black dark:text-white">
 
-  <!--
-    Hero responsive 100 % con flexbox.
-    · < md  (móvil)   → composición del frame "iPhone 16 - 4" de Figma
-    · ≥ md  (escritorio) → composición del frame "homepage oficial" (1440 × 659)
-    Las medidas son porcentajes del ancho del hero, así que todo escala en proporción.
-  -->
+  
   <div class="flex min-h-svh w-full flex-col overflow-hidden bg-white dark:bg-black md:min-h-0">
 
-    <!-- HEAD / NAVBAR -->
+    
     <header class="fixed z-50 mt-[0px] h-[41px] w-full flex-none bg-filigrana md:mt-[0%] md:h-[max(41px,2.847vw)]">
       <nav aria-label="Principal" class="flex h-full flex-row-reverse items-center justify-between px-3 md:flex-row md:pl-[3.125%] md:pr-[1.215%]">
 
-        <!-- Enlaces -->
+        
         <ul id="primary-menu" class="site-nav-links m-0 flex list-none items-center gap-[30px] p-0 md:gap-[10%]">
           <li><a href="index.html" class="whitespace-nowrap text-[15px] leading-none text-red-600">FILIGRANA</a></li>
           <li><a href="libreria.html" class="whitespace-nowrap text-[15px] leading-none text-black transition-colors hover:text-red-600">LIBROS</a></li>
@@ -55,14 +50,14 @@
 
         <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Activar modo oscuro" aria-pressed="false"><img src="images/luz.png" alt=""></button>
 
-        <!-- Icono "g": vuelve a la home -->
+        
         <a id="navbar-logo" href="index.html" aria-label="Filigrana, volver a la home" aria-expanded="false" aria-controls="primary-menu" class="flex h-full flex-none items-center">
           <img src="images/logo-g.png" alt="Filigrana" class="block h-full w-auto">
         </a>
       </nav>
     </header>
 
-    <!-- HERO: logotipo + eslogan -->
+    
     <section aria-labelledby="hero-title" class="home-hero fixed z-40 mt-[100svh] flex w-[82.4%] flex-none flex-col items-end self-center md:ml-[30.4%] md:mt-[10.22%] md:w-[35.2%] md:self-start">
       <h1 id="hero-title" class="m-0 w-full">
         <img src="images/filigrana.png" alt="filigrana" class="block h-auto w-full">
@@ -70,7 +65,7 @@
       <p class="-mt-[3.5%] text-[length:10px] leading-none md:-mr-[1.08%] md:-mt-[4.08%] md:text-[length:max(10px,1.0417vw)] text-[#ff0000]">BIENVENIDOS A NUESTRA LIBRERÍA</p>
     </section>
 
-    <!-- PORTADAS (collage en flex: items-end + márgenes negativos para solapar) -->
+    
       <ul id="gallery-template"aria-label="Libros y revistas destacados" class=" relative m-0 min-h-screen flex w-full flex-none list-none items-start justify-start p-0 md:min-h-[234vh] md:mt-[7%] md:top-[28vh]">
         <li class="flex-none transition-transform duration-300 hover:!z-[40] hover:scale-[1.06] z-[1] order-[1] w-[17.557%] ml-[0%] mt-[6.616%] aspect-[69/92] md:order-[1] md:w-[6.319%] md:ml-[0%] md:mb-[0%] md:aspect-[91/123]">
           <img src="images/editada1.webp" alt="book" decoding="async" class="block h-full w-full object-cover">
@@ -207,7 +202,7 @@
 
       <div class="footer-grid grid grid-cols-1 gap-8 px-[3.4%] pt-2 pb-2 md:min-h-[0rem] md:grid-cols-[1.55fr_1.3fr_1fr] md:pt-4 md:pb-4">
 
-        <!-- Contacto -->
+       
         <div>
           <h2 class="m-0 mb-1 text-[length:max(15px,1.5vw)] leading-[1.1] text-[#ff0000] md:mb-2 font-semibold">CONTÁCTANOS</h2>
           <dl class="m-0 grid grid-cols-[max-content_1fr] gap-x-6 gap-y-1.5 text-[length:max(10px,.9vw)] leading-[1.35] md:gap-x-14 text-[#ffffff]">
@@ -220,7 +215,7 @@
           </dl>
         </div>
 
-        <!-- Ubicación -->
+        
         <div>
           <h2 class="m-0 mb-1 text-[length:max(15px,1.5vw)] leading-[1.1] text-[#ff0000] md:mb-2 font-semibold">UBICACIÓN</h2>
           <address class="text-[length:max(10px,.9vw)] not-italic leading-[1.35] text-[#ffffff]">
@@ -228,7 +223,7 @@
           </address>
         </div>
 
-        <!-- Horario -->
+       
         <div>
           <h2 class="m-0 mb-1 text-[length:max(15px,1.5vw)] leading-[1.1] text-[#ff0000] md:mb-2 font-semibold">HORARIO</h2>
           <p class="m-0 text-[length:max(10px,.9vw)] leading-[1.35] text-[#ffffff]">
@@ -238,11 +233,7 @@
 
       </div>
 
-      <!-- Nombre gigante: el SVG se estira al ancho completo 
-      <svg viewBox="0 0 2576 262" preserveAspectRatio="none" role="img" aria-label="Librería Filigrana" class="mt-0 block aspect-[2576/262] h-auto w-full overflow-visible">
-        <rect x="0" y="57" width="2576" height="199" class="fill-filigrana"/>
-        <text x="0" y="252" font-size="261" textLength="2576" lengthAdjust="spacingAndGlyphs" fill="#ff0000" font-family="Helvetica, Arial, sans-serif">LIBRERÍA FILIGRANA</text>
-      </svg> -->
+      
 
     </section>
 
