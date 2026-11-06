@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Filigrana · Librería independiente</title>
+  <meta name="description" content="Filigrana es una pequeña librería independiente de barrio: arte, diseño gráfico, fotografía e ilustración.">
+
+  <!-- Fuente de la navegación -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://use.typekit.net/ooc3ruf.css">
+
+  <!-- Tailwind CSS (Play CDN) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: { filigrana: '#314bf4',
+            rojo: '#ff0000',
+           },
+          fontFamily: { inter: ['helvetica', 'system-ui', 'sans-serif'] },
+        },
+      },
+    };
+  </script>
+
+  <!-- Estilos propios -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body class="about-page bg-white font-helvetica font-medium text-black dark:bg-black dark:text-white">
+
+  <!--
+    Hero responsive 100 % con flexbox.
+    · < md  (móvil)   → composición del frame "iPhone 16 - 4" de Figma
+    · ≥ md  (escritorio) → composición del frame "homepage oficial" (1440 × 659)
+    Las medidas son porcentajes del ancho del hero, así que todo escala en proporción.
+  -->
+  <div class="flex min-h-svh w-full flex-col overflow-hidden md:min-h-0">
+
+    <!-- HEAD / NAVBAR -->
+    <header class="fixed z-50 mt-[0px] h-[41px] w-full flex-none bg-filigrana md:mt-[0%] md:h-[max(41px,2.847vw)]">
+      <nav aria-label="Principal" class="flex h-full flex-row-reverse items-center justify-between px-3 md:flex-row md:pl-[3.125%] md:pr-[1.215%]">
+
+        <!-- Enlaces -->
+        <ul id="primary-menu" class="site-nav-links m-0 flex list-none items-center gap-[30px] p-0 md:gap-[10%]">
+          <li><a href="index.html" class="whitespace-nowrap text-[15px] leading-none text-black transition-colors hover:text-red-600">FILIGRANA</a></li>
+          <li><a href="libreria.html" class="whitespace-nowrap text-[15px] leading-none text-black transition-colors hover:text-red-600">LIBROS</a></li>
+          <li><a href="about.html" class="whitespace-nowrap text-[15px] leading-none text-red-600">SOBRE NOSOTRAS</a></li>
+        </ul>
+
+        <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Activar modo oscuro" aria-pressed="false"><img src="images/luz.png" alt=""></button>
+
+        <!-- Icono "g": vuelve a la home -->
+        <a id="navbar-logo" href="index.html" aria-label="Filigrana, volver a la home" aria-expanded="false" aria-controls="primary-menu" class="flex h-full flex-none items-center">
+          <img src="images/logo-g.png" alt="Filigrana" class="block h-full w-auto">
+        </a>
+      </nav>
+    </header>
+
+    <main class="flex min-h-svh flex-1 items-center justify-center px-5 pt-[40px] md:px-8">
+      <section aria-labelledby="about-title" class="my-10 grid w-full max-w-[64rem] grid-cols-1 items-center gap-8 text-left md:grid-cols-[1.4fr_1fr] md:gap-12">
+        <div class="about-copy space-y-4 text-[22px] font-light leading-tight tracking-tight [word-spacing:-0.02em] md:text-2xl">
+          <p>
+          Filigrana es una pequeña librería independiente de barrio, un proyecto que nace de las ganas de crear un espacio diferente, donde descubrir, compartir y dejarse llevar por la curiosidad. Un lugar para quienes disfrutan perdiéndose entre estanterías y encontrando libros que quizá no sabían que estaban buscando.
+          </p>
+          <p>
+          Nos gusta explorar más allá de lo convencional. Por eso, nuestra selección reúne libros de arte, diseño gráfico, fotografía, ilustración y otras disciplinas creativas.
+          Creemos que los libros son mucho más que historias escritas entre dos tapas. Son objetos que se tocan, se hojean, se coleccionan y se comparten; pequeñas ventanas a otros mundos y formas de entender el nuestro. Por eso, cada libro que llega a Filigrana tiene algo que lo hace especial.</p> 
+        </div>
+        <div class="about-image relative">
+        <h1 id="about-title" class="about-title absolute inset-0 z-10 m-0 flex items-center justify-center text-left text-2xl text-red-600 font-helvetica font-bold md:text-5xl lg:text-8xl">ABOUT US <br> SOBRE NOSOTRAS</h1>
+        <img
+          src="images/editada9.webp"
+          alt="Descripción de la imagen"
+          class="block h-auto w-full object-cover"
+          >
+        </div>
+      </section>
+    </main>
+  </div>
+  <section aria-label="Información de contacto" class="site-footer w-full border-t-[6px] border-filigrana bg-filigrana font-family: Helvetica, Arial, sans-serif">
+
+      <div class="footer-grid grid grid-cols-1 gap-8 px-[3.4%] pt-2 pb-2 md:min-h-[0rem] md:grid-cols-[1.55fr_1.3fr_1fr] md:pt-4 md:pb-4">
+
+        <!-- Contacto -->
+        <div>
+          <h2 class="m-0 mb-1 text-[length:max(15px,1.5vw)] leading-[1.1] text-[#ff0000] md:mb-2 font-semibold">CONTÁCTANOS</h2>
+          <dl class="m-0 grid grid-cols-[max-content_1fr] gap-x-6 gap-y-1.5 text-[length:max(10px,.9vw)] leading-[1.35] md:gap-x-14 text-[#ffffff]">
+            <dt>REDES SOCIALES:</dt>
+            <dd class="m-0">Filigrana___</dd>
+            <dt>CORREO:</dt>
+            <dd class="m-0"><a href="mailto:Filigrana@gmail.com" class="hover:underline">Filigrana@gmail.com</a></dd>
+            <dt>TELÉFONO</dt>
+            <dd class="m-0"><a href="tel:+34680567613" class="hover:underline">+34 680 567 613</a></dd>
+          </dl>
+        </div>
+
+        <!-- Ubicación -->
+        <div>
+          <h2 class="m-0 mb-1 text-[length:max(15px,1.5vw)] leading-[1.1] text-[#ff0000] md:mb-2 font-semibold">UBICACIÓN</h2>
+          <address class="text-[length:max(10px,.9vw)] not-italic leading-[1.35] text-[#ffffff]">
+            CALLE VELÁZQUEZ, 211, CHAMARTÍN 28003<br>MADRID
+          </address>
+        </div>
+
+        <!-- Horario -->
+        <div>
+          <h2 class="m-0 mb-1 text-[length:max(15px,1.5vw)] leading-[1.1] text-[#ff0000] md:mb-2 font-semibold">HORARIO</h2>
+          <p class="m-0 text-[length:max(10px,.9vw)] leading-[1.35] text-[#ffffff]">
+            LUNES-VIERNES: 9:00-18:00<br>SÁBADOS:10:00-18:00<br>DOMINGOS CERRAMOS
+          </p>
+        </div>
+      <!-- Lluvia decorativa de portadas -->
+      <div class="rain-layer" aria-hidden="true">
+        <img src="images/revista1.png" alt="" class="rain-image" style="left: 1%; animation-delay: -5s; animation-duration: 16s;">
+        <img src="images/revista2.png" alt="" class="rain-image" style="left: 10%; animation-delay: -5s; animation-duration: 9s;">
+        <img src="images/revista3.png" alt="" class="rain-image" style="left: 9%; animation-delay: -3s; animation-duration: 7s;">
+        <img src="images/revista4.png" alt="" class="rain-image" style="left: 70%; animation-delay: -7s; animation-duration: 10s;">
+        <img src="images/revista5.png" alt="" class="rain-image" style="left: 80%; animation-delay: -2s; animation-duration: 8s;">
+        <img src="images/revista6.png" alt="" class="rain-image" style="left: 87%; animation-delay: -6s; animation-duration: 9s;">
+        <img src="images/editada7.webp" alt="" class="rain-image" style="left: 97%; animation-delay: -4s; animation-duration: 7s;">
+        <img src="images/editada6.webp" alt="" class="rain-image" style="left: 90%; animation-delay: -20s; animation-duration: 18s;">
+        <img src="images/editada5.webp" alt="" class="rain-image" style="left: 5%; animation-delay: -20s; animation-duration: 18s;">
+        <img src="images/Captura de pantalla 2026-11-05 095653.png " alt="" class="rain-image" style="left: 10%; animation-delay: -10s; animation-duration: 14s;">
+        <img src="images/revista editada10.png " alt="" class="rain-image" style="left: 70%; animation-delay: -10s; animation-duration: 14s;">
+      </div>
+      </div>
+<script>
+  const primaryMenu = document.getElementById('primary-menu');
+  const navbarLogo = document.getElementById('navbar-logo');
+
+  function closeMenu() {
+    document.body.classList.remove('mobile-nav-open');
+    navbarLogo.setAttribute('aria-expanded', 'false');
+  }
+
+  function toggleMenu() {
+    const isOpen = document.body.classList.toggle('mobile-nav-open');
+    navbarLogo.setAttribute('aria-expanded', String(isOpen));
+  }
+
+  navbarLogo.addEventListener('click', (event) => {
+    if (window.innerWidth < 768) {
+      event.preventDefault();
+      toggleMenu();
+    }
+  });
+
+  primaryMenu.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', closeMenu);
+  });
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') closeMenu();
+  });
+
+  window.addEventListener('resize', () => {
+    if (window.innerWidth >= 768) closeMenu();
+  });
+
+  const themeToggle = document.getElementById('theme-toggle');
+  const savedTheme = localStorage.getItem('filigrana-theme');
+  const isDarkMode = savedTheme === 'dark';
+  document.documentElement.classList.toggle('dark', isDarkMode);
+  themeToggle.setAttribute('aria-pressed', String(isDarkMode));
+  themeToggle.setAttribute('aria-label', isDarkMode ? 'Activar modo claro' : 'Activar modo oscuro');
+  themeToggle.querySelector('img').src = isDarkMode ? 'images/noche.png' : 'images/luz.png';
+
+  themeToggle.addEventListener('click', () => {
+    const isDark = document.documentElement.classList.toggle('dark');
+    localStorage.setItem('filigrana-theme', isDark ? 'dark' : 'light');
+    themeToggle.setAttribute('aria-pressed', String(isDark));
+    themeToggle.setAttribute('aria-label', isDark ? 'Activar modo claro' : 'Activar modo oscuro');
+    themeToggle.querySelector('img').src = isDark ? 'images/noche.png' : 'images/luz.png';
+  });
+</script>
+</body>
