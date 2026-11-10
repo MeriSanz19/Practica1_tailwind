@@ -20,7 +20,7 @@ html.dark {
 }
 
 body.about-page {
-  background-image: url("../images/cielo-fondo.png");
+  background-image: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url("../images/cielo-fondo.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -32,7 +32,7 @@ html.dark body.about-page {
 }
 
 body.libreria-page {
-  background-image: url("../images/cielo-fondo.png");
+  background-image: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url("../images/cielo-fondo.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
