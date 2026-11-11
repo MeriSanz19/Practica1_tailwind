@@ -292,9 +292,291 @@ ul[aria-label="Libros y revistas destacados"] > li:hover {
   }
 }
 
+.event-feature {
+  position: fixed;
+  z-index: 20;
+  top: 96px;
+  right: 3.125vw;
+  bottom: 96px;
+  left: 42vw;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 250ms ease, visibility 250ms ease;
+}
+
+.event-feature img,
+.event-feature-color {
+  width: 100%;
+  height: 100%;
+}
+
+.event-feature img {
+  display: block;
+  object-fit: cover;
+  border: clamp(6px, 0.8vw, 12px) solid var(--event-hover-color, var(--filigrana-blue));
+}
+
+.event-feature-color {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(1rem, 3vh, 2rem);
+  overflow-y: auto;
+  padding: clamp(1rem, 3vw, 2.5rem);
+  background: var(--filigrana-blue);
+  color: #fff;
+  font-size: 15px;
+  line-height: 1.1;
+  text-align: left;
+}
+
+.event-feature-heading {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.event-feature-color h2,
+.event-feature-color h3,
+.event-feature-color p {
+  margin: 0;
+  font: inherit;
+}
+
+.event-feature-color h2,
+.event-feature-color h3 {
+  color: var(--event-title-color, #ff0000);
+  font-size: 18px;
+}
+
+.event-feature-color p {
+  font-weight: 400;
+}
+
+.event-reservation-form {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+.event-reservation-form[hidden] {
+  display: none;
+}
+
+.event-reservation-form label {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 0.4rem;
+  color: #fff;
+}
+
+.event-reservation-form input {
+  width: 100%;
+  min-width: 0;
+  border: 1px solid #d1d5db;
+  padding: 0.6rem;
+  background: #fff;
+  color: #000;
+  font: inherit;
+}
+
+.event-reservation-form input::placeholder {
+  color: #9ca3af;
+  opacity: 1;
+}
+
+.event-reservation-form input:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+}
+
+.event-reserve-button {
+  align-self: flex-start;
+  margin-top: auto;
+  border: 0;
+  padding: 0.65rem 1rem;
+  background: #fff;
+  color: var(--event-reserve-color, var(--event-hover-color, var(--filigrana-blue)));
+  font: inherit;
+  cursor: pointer;
+  box-shadow: 0 0 0 rgb(0 0 0 / 0);
+  transition: background-color 200ms ease, color 200ms ease, box-shadow 200ms ease;
+}
+
+.event-reserve-button.is-open {
+  background: #d1d5db;
+  color: #9ca3af;
+  cursor: default;
+}
+
+.event-reserve-button.is-ready {
+  background: var(--event-reserve-color, var(--event-hover-color, var(--filigrana-blue)));
+  color: #fff;
+}
+
+.event-reserve-button:not(:disabled):not(.is-open):hover,
+.event-reserve-button.is-ready:not(:disabled):hover {
+  background: var(--event-reserve-color, var(--event-hover-color, var(--filigrana-blue)));
+  color: #fff;
+  box-shadow: 0 4px 12px rgb(0 0 0 / 0.25);
+}
+
+.event-reserve-button:disabled {
+  cursor: default;
+}
+
+.event-reserve-button:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 3px;
+}
+
+.reservation-burst {
+  position: fixed;
+  z-index: 100;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.reservation-book {
+  position: absolute;
+  right: 3vw;
+  bottom: 3vh;
+  width: clamp(1.5rem, 3vw, 2.5rem);
+  height: auto;
+  filter: drop-shadow(0 3px 5px rgb(0 0 0 / 0.3));
+  animation: reservation-book-burst 4s cubic-bezier(0.16, 0.75, 0.3, 1) var(--burst-delay) both;
+}
+
+@media (min-width: 768px) {
+  .events-main {
+    width: 100%;
+    transition: width 250ms ease;
+  }
+
+  .event-card {
+    box-shadow: 0 4px 12px rgb(0 0 0 / 0.2);
+    transition: width 250ms ease, background-color 250ms ease, box-shadow 200ms ease;
+  }
+
+  .event-card[role="button"] {
+    cursor: pointer;
+  }
+
+  .event-card[role="button"]:focus-visible {
+    outline: 2px solid var(--filigrana-blue);
+    outline-offset: 3px;
+  }
+
+  .event-card.is-selected {
+    width: fit-content;
+    max-width: 100%;
+  }
+
+  .event-card.is-selected[class~="hover:bg-filigrana"] {
+    background-color: #314bf4;
+  }
+
+  .event-card.is-selected[class~="hover:bg-azulito"] {
+    background-color: #7dd3fc;
+  }
+
+  .event-card.is-selected[class~="hover:bg-rosa"] {
+    background-color: #d946ef;
+  }
+
+  .event-card.is-selected[class~="hover:bg-naranja"] {
+    background-color: #fb923c;
+  }
+
+  .event-card.is-selected[class~="hover:bg-verde"] {
+    background-color: #22c55e;
+  }
+
+  .event-card.is-selected[class~="hover:bg-ambar"] {
+    background-color: #fbbf24;
+  }
+
+  body.event-selected .events-main {
+    width: 42vw;
+  }
+
+  body.event-selected .event-feature {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
+
+@media (max-width: 767px) {
+  .events-page main {
+    padding-top: 0;
+  }
+
+  .events-page .event-card {
+    margin-top: 32px;
+  }
+
+  .events-page .site-footer {
+    margin-top: 20px;
+  }
+
+  .event-feature {
+    position: static;
+    display: none;
+    width: 100%;
+    height: auto;
+    margin: 0.75rem 0 0;
+    grid-template-columns: minmax(0, 1fr);
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transition: none;
+  }
+
+  .event-feature[aria-hidden="false"] {
+    display: grid;
+  }
+
+  .event-feature img {
+    width: 100%;
+    height: auto;
+    max-height: 45svh;
+    object-fit: cover;
+  }
+
+  .event-feature-color {
+    width: 100%;
+    height: auto;
+    min-height: 18rem;
+    overflow: visible;
+    font-size: 15px;
+  }
+
+  .events-page main .event-feature-color p {
+    font-size: inherit;
+  }
+}
+
 @keyframes image-fall {
   0% { transform: translateY(0) rotate(0deg); }
   35%, 100% { transform: translateY(125vh) rotate(360deg); }
+}
+
+@keyframes reservation-book-burst {
+  0% {
+    transform: translate(0, 0) scale(0.3) rotate(0);
+    opacity: 0;
+  }
+  12% { opacity: 1; }
+  100% {
+    transform: translate(var(--burst-x), var(--burst-y)) scale(1) rotate(var(--burst-rotation));
+    opacity: 0;
+  }
 }
 
 /* Accesibilidad */
@@ -304,4 +586,5 @@ a:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }
   html { scroll-behavior: auto; }
   li { transition: none !important; }
   .rain-image { animation: none; }
+  .reservation-book { animation-duration: 1ms; }
 }
