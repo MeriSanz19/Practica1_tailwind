@@ -30,6 +30,21 @@
     };
   </script>
   <link rel="stylesheet" href="css/styles.css">
+  <style>
+    @media (max-width: 767px) {
+      .libreria-page [data-libro] > div {
+        font-size: 0.75rem;
+      }
+
+      .libreria-page [data-libro] h3 {
+        font-size: 0.875rem;
+      }
+
+      .libreria-page [data-libro] h4 {
+        font-size: 0.625rem;
+      }
+    }
+  </style>
 </head>
 
 
@@ -56,7 +71,7 @@
       </header>
 
     <section class="pt-16 md:pt-20">
-    <h2 class="mb-6 px-4 text-lg uppercase md:px-10 lg:px-16 text-red-600">
+    <h2 class="mb-6 px-4 text-lg uppercase md:px-10 lg:px-16 text-red-600 font-bold">
     Bestsellers
     </h2>
 
@@ -177,7 +192,7 @@
 
 <section>
 
-  <h2 class="mb-6 mt-10 px-4 text-lg uppercase text-red-600 md:mt-14 md:px-10 lg:px-16">
+  <h2 class="mb-6 mt-10 px-4 text-lg uppercase text-red-600 md:mt-14 md:px-10 lg:px-16 font-bold">
     Catálogo
   </h2>
 
@@ -185,161 +200,183 @@
 
     <article data-libro data-open="false" class="group relative aspect-[2/3] cursor-pointer overflow-hidden">
       <img src="imagenes/catalogo/revista1.png" class="h-full w-full object-cover">
-      <div class="absolute inset-0 flex flex-col justify-center bg-red-600 p-4 text-sm text-white opacity-0 transition-opacity duration-300 group-data-[open=true]:opacity-100 md:group-hover:opacity-100">
-        <h3 class="mb-2 font-bold uppercase">Interview 563</h3>
-        <p class="font-light">Jeremy Allen White.</p>
+      <div class="absolute inset-0 flex flex-col justify-center bg-red-600 p-4 text-sm text-white opacity-0 transition-opacity duration-300 group-data-[open=true]:opacity-100 md:group-hover:opacity-100 md:text-lg">
+        <h3 class="mb-2 text-base font-bold uppercase md:text-xl">Interview 563</h3>
+        <h4 class="mb-1 text-xs font-semibold uppercase tracking-wide md:text-sm">Jeremy Allen White</h4>
+        <p class="font-light">Austin Butler habla con Jeremy Allen White sobre ponerse en la piel de Springsteen.</p>
       </div>
     </article>
 
     <article data-libro data-open="false" class="group relative aspect-[2/3] cursor-pointer overflow-hidden">
       <img src="imagenes/catalogo/libro2.jpg" class="h-full w-full object-cover">
-      <div class="absolute inset-0 flex flex-col justify-center bg-filigrana p-4 text-sm text-white opacity-0 transition-opacity duration-300 group-data-[open=true]:opacity-100 md:group-hover:opacity-100">
-        <h3 class="mb-2 font-bold uppercase">Barragán: His Library</h3>
+      <div class="absolute inset-0 flex flex-col justify-center bg-filigrana p-4 text-sm text-white opacity-0 transition-opacity duration-300 group-data-[open=true]:opacity-100 md:group-hover:opacity-100 md:text-lg">
+        <h3 class="mb-2 text-base font-bold uppercase md:text-xl">Barragán: His Library</h3>
+        <h4 class="mb-1 text-xs font-semibold uppercase tracking-wide md:text-sm">David Jiménez y Alfonso Alfaro</h4>
         <p class="font-light">La biblioteca de Luis Barragán en su casa de Ciudad de México.</p>
       </div>
     </article>
 
     <article data-libro data-open="false" class="group relative aspect-[2/3] cursor-pointer overflow-hidden">
       <img src="imagenes/catalogo/revista3.png" class="h-full w-full object-cover">
-      <div class="absolute inset-0 flex flex-col justify-center bg-amber-400 p-4 text-sm text-white opacity-0 transition-opacity duration-300 group-data-[open=true]:opacity-100 md:group-hover:opacity-100">
-        <h3 class="mb-2 font-bold uppercase">Elephant 30</h3>
-        <p class="font-light">Apps y copyright.</p>
+      <div class="absolute inset-0 flex flex-col justify-center bg-amber-400 p-4 text-sm text-white opacity-0 transition-opacity duration-300 group-data-[open=true]:opacity-100 md:group-hover:opacity-100 md:text-lg">
+        <h3 class="mb-2 text-base font-bold uppercase md:text-xl">Elephant 30</h3>
+        <h4 class="mb-1 text-xs font-semibold uppercase tracking-wide md:text-sm">Apps y copyright</h4>
+        <p class="font-light">Neo Rauch, Henrik Vibskov, Joan Semmel y Ruth van Beek hablan de la imagen que se escapa del estudio.</p>
       </div>
     </article>
 
     <article data-libro data-open="false" class="group relative aspect-[2/3] cursor-pointer overflow-hidden">
       <img src="imagenes/catalogo/libro6.png" class="h-full w-full object-cover">
-      <div class="absolute inset-0 flex flex-col justify-center bg-green-600 p-4 text-sm text-white opacity-0 transition-opacity duration-300 group-data-[open=true]:opacity-100 md:group-hover:opacity-100">
-        <h3 class="mb-2 font-bold uppercase">Arnold</h3>
-        <p class="font-light"> La trayectoria de Arnold Schwarzenegger, del culturismo al cine y a la política.</p>
+      <div class="absolute inset-0 flex flex-col justify-center bg-green-600 p-4 text-sm text-white opacity-0 transition-opacity duration-300 group-data-[open=true]:opacity-100 md:group-hover:opacity-100 md:text-lg">
+        <h3 class="mb-2 text-base font-bold uppercase md:text-xl">Arnold</h3>
+        <h4 class="mb-1 text-xs font-semibold uppercase tracking-wide md:text-sm">Taschen</h4>
+        <p class="font-light">La trayectoria de Arnold Schwarzenegger, del culturismo al cine y a la política.</p>
       </div>
     </article>
 
     <article data-libro data-open="false" class="group relative aspect-[2/3] cursor-pointer overflow-hidden">
       <img src="imagenes/catalogo/revista5.png" class="h-full w-full object-cover">
-      <div class="absolute inset-0 flex flex-col justify-center bg-fuchsia-500 p-4 text-sm text-white opacity-0 transition-opacity duration-300 group-data-[open=true]:opacity-100 md:group-hover:opacity-100">
-        <h3 class="mb-2 font-bold uppercase">Elephant 40</h3>
-        <p class="font-light">Diez años de la revista</p>
+      <div class="absolute inset-0 flex flex-col justify-center bg-fuchsia-500 p-4 text-sm text-white opacity-0 transition-opacity duration-300 group-data-[open=true]:opacity-100 md:group-hover:opacity-100 md:text-lg">
+        <h3 class="mb-2 text-base font-bold uppercase md:text-xl">Elephant 40</h3>
+        <h4 class="mb-1 text-xs font-semibold uppercase tracking-wide md:text-sm">Diez años de la revista</h4>
+        <p class="font-light">Juno Calypso, Anthea Hamilton, Paul McCarthy y Wu Tsang hablan de mirarse a sí mismos.
+
+</p>
       </div>
     </article>
 
     <article data-libro data-open="false" class="group relative aspect-[2/3] cursor-pointer overflow-hidden">
       <img src="imagenes/catalogo/revista6.png" class="h-full w-full object-cover">
-      <div class="absolute inset-0 flex flex-col justify-center bg-orange-500 p-4 text-sm text-white opacity-0 transition-opacity duration-300 group-data-[open=true]:opacity-100 md:group-hover:opacity-100">
-        <h3 class="mb-2 font-bold uppercase">Elephant 41</h3>
-        <p class="font-light">Lo doméstico y lo salvaje.</p>
+      <div class="absolute inset-0 flex flex-col justify-center bg-orange-500 p-4 text-sm text-white opacity-0 transition-opacity duration-300 group-data-[open=true]:opacity-100 md:group-hover:opacity-100 md:text-lg">
+        <h3 class="mb-2 text-base font-bold uppercase md:text-xl">Elephant 41</h3>
+        <h4 class="mb-1 text-xs font-semibold uppercase tracking-wide md:text-sm">Lo doméstico y lo salvaje</h4>
+        <p class="font-light">Lee Bul, Florence Peake y Tim Walker hablan de un arte que se sale de la casa.</p>
       </div>
     </article>
 
     <article data-libro data-open="false" class="group relative aspect-[2/3] cursor-pointer overflow-hidden">
       <img src="imagenes/catalogo/revista7.png" class="h-full w-full object-cover">
-      <div class="absolute inset-0 flex flex-col justify-center bg-red-600 p-4 text-sm text-white opacity-0 transition-opacity duration-300 group-data-[open=true]:opacity-100 md:group-hover:opacity-100">
-        <h3 class="mb-2 font-bold uppercase">cara 04</h3>
-        <p class="font-light">El último número.</p>
+      <div class="absolute inset-0 flex flex-col justify-center bg-red-600 p-4 text-sm text-white opacity-0 transition-opacity duration-300 group-data-[open=true]:opacity-100 md:group-hover:opacity-100 md:text-lg">
+        <h3 class="mb-2 text-base font-bold uppercase md:text-xl">cara 04</h3>
+        <h4 class="mb-1 text-xs font-semibold uppercase tracking-wide md:text-sm">El último número</h4>
+        <p class="font-light">Habla del rostro, desde todos los ángulos.</p>
       </div>
     </article>
 
     <article data-libro data-open="false" class="group relative aspect-[2/3] cursor-pointer overflow-hidden">
       <img src="imagenes/catalogo/libro1.jpg" class="h-full w-full object-cover">
-      <div class="absolute inset-0 flex flex-col justify-center bg-filigrana p-4 text-sm text-white opacity-0 transition-opacity duration-300 group-data-[open=true]:opacity-100 md:group-hover:opacity-100">
-        <h3 class="mb-2 font-bold uppercase">Pepita</h3>
-        <p class="font-light">Vita Sackville-West. La vida de su abuela, la bailarina española Pepita.</p>
+      <div class="absolute inset-0 flex flex-col justify-center bg-filigrana p-4 text-sm text-white opacity-0 transition-opacity duration-300 group-data-[open=true]:opacity-100 md:group-hover:opacity-100 md:text-lg">
+        <h3 class="mb-2 text-base font-bold uppercase md:text-xl">Pepita</h3>
+        <h4 class="mb-1 text-xs font-semibold uppercase tracking-wide md:text-sm">Vita Sackville-West</h4>
+        <p class="font-light">La vida de su abuela, la bailarina española Pepita.</p>
       </div>
     </article>
 
     <article data-libro data-open="false" class="group relative aspect-[2/3] cursor-pointer overflow-hidden">
       <img src="imagenes/catalogo/libro4.jpg" class="h-full w-full object-cover">
-      <div class="absolute inset-0 flex flex-col justify-center bg-amber-400 p-4 text-sm text-white opacity-0 transition-opacity duration-300 group-data-[open=true]:opacity-100 md:group-hover:opacity-100">
-        <h3 class="mb-2 font-bold uppercase">Sex</h3>
-        <p class="font-light">Madonna. El libro de fotos de 1992. Esta es la edición japonesa, con el single de Erotica.</p>
+      <div class="absolute inset-0 flex flex-col justify-center bg-amber-400 p-4 text-sm text-white opacity-0 transition-opacity duration-300 group-data-[open=true]:opacity-100 md:group-hover:opacity-100 md:text-lg">
+        <h3 class="mb-2 text-base font-bold uppercase md:text-xl">Sex</h3>
+        <h4 class="mb-1 text-xs font-semibold uppercase tracking-wide md:text-sm">Madonna </h4>
+        <p class="font-light">El libro de fotos de 1992. Esta es la edición japonesa, con el single de Erotica.</p>
       </div>
     </article>
 
     <article data-libro data-open="false" class="group relative aspect-[2/3] cursor-pointer overflow-hidden">
       <img src="imagenes/catalogo/revista editada10.png" class="h-full w-full object-cover">
-      <div class="absolute inset-0 flex flex-col justify-center bg-green-600 p-4 text-sm text-white opacity-0 transition-opacity duration-300 group-data-[open=true]:opacity-100 md:group-hover:opacity-100">
-      <h3 class="mb-2 uppercase">Colors 29</h3>
-      <p class="font-light">Juguetes.</p>
+      <div class="absolute inset-0 flex flex-col justify-center bg-green-600 p-4 text-sm text-white opacity-0 transition-opacity duration-300 group-data-[open=true]:opacity-100 md:group-hover:opacity-100 md:text-lg">
+      <h3 class="mb-2 text-base font-bold uppercase md:text-xl">Colors 29</h3>
+      <h4 class="mb-1 text-xs font-semibold uppercase tracking-wide md:text-sm">Juguetes</h4>
+      <p class="font-light">Juguetes pensados para un futuro mejor.</p>
       </div>
     </article>
 
     <article data-libro data-open="false" class="group relative aspect-[2/3] cursor-pointer overflow-hidden">
       <img src="imagenes/catalogo/libro5.png" class="h-full w-full object-cover">
-      <div class="absolute inset-0 flex flex-col justify-center bg-fuchsia-500 p-4 text-sm text-white opacity-0 transition-opacity duration-300 group-data-[open=true]:opacity-100 md:group-hover:opacity-100">
-      <h3 class="mb-2 font-bold uppercase">Freud</h3>
+      <div class="absolute inset-0 flex flex-col justify-center bg-fuchsia-500 p-4 text-sm text-white opacity-0 transition-opacity duration-300 group-data-[open=true]:opacity-100 md:group-hover:opacity-100 md:text-lg">
+      <h3 class="mb-2 text-base font-bold uppercase md:text-xl">Freud</h3>
+      <h4 class="mb-1 text-xs font-semibold uppercase tracking-wide md:text-sm">Taschen</h4>
       <p class="font-light">La pintura de Lucian Freud, del cuadro de la cebra a los retratos. Sebastian Smee.</p>
       </div>
     </article>
 
     <article data-libro data-open="false" class="group relative aspect-[2/3] cursor-pointer overflow-hidden">
       <img src="imagenes/catalogo/revista editada9.png" class="h-full w-full object-cover">
-      <div class="absolute inset-0 flex flex-col justify-center bg-orange-500 p-4 text-sm text-white opacity-0 transition-opacity duration-300 group-data-[open=true]:opacity-100 md:group-hover:opacity-100">
-      <h3 class="mb-2 font-bold uppercase">Colors 7.</h3>
-      <p class="font-light"> Sobre AIDS</p>
+      <div class="absolute inset-0 flex flex-col justify-center bg-orange-500 p-4 text-sm text-white opacity-0 transition-opacity duration-300 group-data-[open=true]:opacity-100 md:group-hover:opacity-100 md:text-lg">
+      <h3 class="mb-2 text-base font-bold uppercase md:text-xl">Colors 7.</h3>
+      <h4 class="mb-1 text-xs font-semibold uppercase tracking-wide md:text-sm">AIDS</h4>
+      <p class="font-light"> El sida, dicho sin rodeos: moda, sexo y muerte </p>
       </div>
     </article>
 
     <article data-libro data-open="false" class="group relative aspect-[2/3] cursor-pointer overflow-hidden">
       <img src="imagenes/catalogo/libro7.png" class="h-full w-full object-cover">
-      <div class="absolute inset-0 flex flex-col justify-center bg-red-600 p-4 text-sm text-white opacity-0 transition-opacity duration-300 group-data-[open=true]:opacity-100 md:group-hover:opacity-100">
-        <h3 class="mb-2 font-bold uppercase">Extraordinary Records</h3>
+      <div class="absolute inset-0 flex flex-col justify-center bg-red-600 p-4 text-sm text-white opacity-0 transition-opacity duration-300 group-data-[open=true]:opacity-100 md:group-hover:opacity-100 md:text-lg">
+        <h3 class="mb-2 text-base font-bold uppercase md:text-xl">Extraordinary Records</h3>
+        <h4 class="mb-1 text-xs font-semibold uppercase tracking-wide md:text-sm">Taschen</h4>
         <p class="font-light">Discos de vinilo raros, únicos o casi imposibles de encontrar.</p>
       </div>
     </article>
 
     <article data-libro data-open="false" class="group relative aspect-[2/3] cursor-pointer overflow-hidden">
       <img src="imagenes/catalogo/revista editada11.png" class="h-full w-full object-cover">
-      <div class="absolute inset-0 flex flex-col justify-center bg-filigrana p-4 text-sm text-white opacity-0 transition-opacity duration-300 group-data-[open=true]:opacity-100 md:group-hover:opacity-100">
-        <h3 class="mb-2 font-bold uppercase">Colors 40</h3>
-        <p class="font-light">Basura.</p>
+      <div class="absolute inset-0 flex flex-col justify-center bg-filigrana p-4 text-sm text-white opacity-0 transition-opacity duration-300 group-data-[open=true]:opacity-100 md:group-hover:opacity-100 md:text-lg">
+        <h3 class="mb-2 text-base font-bold uppercase md:text-xl">Colors 40</h3>
+        <h4 class="mb-1 text-xs font-semibold uppercase tracking-wide md:text-sm">Basura</h4>
+        <p class="font-light">Del envase de un plátano al residuo de cada día.</p>
       </div>
     </article>
 
     <article data-libro data-open="false" class="group relative aspect-[2/3] cursor-pointer overflow-hidden">
       <img src="imagenes/catalogo/revista editada8.png" class="h-full w-full object-cover">
-      <div class="absolute inset-0 flex flex-col justify-center bg-amber-400 p-4 text-sm text-white opacity-0 transition-opacity duration-300 group-data-[open=true]:opacity-100 md:group-hover:opacity-100">
-        <h3 class="mb-2 font-bold uppercase">032c 49</h3>
-        <p class="font-light">Florentina Holzinger, por Juergen Teller</p>
+      <div class="absolute inset-0 flex flex-col justify-center bg-amber-400 p-4 text-sm text-white opacity-0 transition-opacity duration-300 group-data-[open=true]:opacity-100 md:group-hover:opacity-100 md:text-lg">
+        <h3 class="mb-2 text-base font-bold uppercase md:text-xl">032c 49</h3>
+        <h4 class="mb-1 text-xs font-semibold uppercase tracking-wide md:text-sm">Florentina Holzinger</h4>
+        <p class="font-light">Florentina Holzinger, retratada por Juergen Teller.</p>
       </div>
     </article>
 
     <article data-libro data-open="false" class="group relative aspect-[2/3] cursor-pointer overflow-hidden">
       <img src="imagenes/catalogo/revista editada12.png" class="h-full w-full object-cover">
-      <div class="absolute inset-0 flex flex-col justify-center bg-green-600 p-4 text-sm text-white opacity-0 transition-opacity duration-300 group-data-[open=true]:opacity-100 md:group-hover:opacity-100">
-        <h3 class="mb-2 font-bold uppercase">Colors</h3>
-        <p class="font-light">Mirando al arte</p>
+      <div class="absolute inset-0 flex flex-col justify-center bg-green-600 p-4 text-sm text-white opacity-0 transition-opacity duration-300 group-data-[open=true]:opacity-100 md:group-hover:opacity-100 md:text-lg">
+        <h3 class="mb-2 text-base font-bold uppercase md:text-xl">Colors</h3>
+        <h4 class="mb-1 text-xs font-semibold uppercase tracking-wide md:text-sm">Mirando al arte</h4>
+        <p class="font-light">Un vistazo al arte, del objeto cotidiano a la obra de museo.</p>
       </div>
     </article>
 
     <article data-libro data-open="false" class="group relative aspect-[2/3] cursor-pointer overflow-hidden">
       <img src="imagenes/catalogo/libro3.jpg" class="h-full w-full object-cover">
-      <div class="absolute inset-0 flex flex-col justify-center bg-fuchsia-500 p-4 text-sm text-white opacity-0 transition-opacity duration-300 group-data-[open=true]:opacity-100 md:group-hover:opacity-100">
-        <h3 class="mb-2 font-bold uppercase">Imperial courts</h3>
+      <div class="absolute inset-0 flex flex-col justify-center bg-fuchsia-500 p-4 text-sm text-white opacity-0 transition-opacity duration-300 group-data-[open=true]:opacity-100 md:group-hover:opacity-100 md:text-lg">
+        <h3 class="mb-2 text-base font-bold uppercase md:text-xl">Imperial courts</h3>
+        <h4 class="mb-1 text-xs font-semibold uppercase tracking-wide md:text-sm">Dana Lixenberg</h4>
         <p class="font-light">Dana Lixenberg. Retrato del barrio mperial Courts, en Watts, a lo largo de veinte años.</p>
       </div>
     </article>
 
     <article data-libro data-open="false" class="group relative aspect-[2/3] cursor-pointer overflow-hidden">
       <img src="imagenes/catalogo/libro 9.png" class="h-full w-full object-cover">
-      <div class="absolute inset-0 flex flex-col justify-center bg-orange-500 p-4 text-sm text-white opacity-0 transition-opacity duration-300 group-data-[open=true]:opacity-100 md:group-hover:opacity-100">
-        <h3 class="mb-2 font-bold uppercase">Basquiat</h3>
+      <div class="absolute inset-0 flex flex-col justify-center bg-orange-500 p-4 text-sm text-white opacity-0 transition-opacity duration-300 group-data-[open=true]:opacity-100 md:group-hover:opacity-100 md:text-lg">
+        <h3 class="mb-2 text-base font-bold uppercase md:text-xl">Basquiat</h3>
+        <h4 class="mb-1 text-xs font-semibold uppercase tracking-wide md:text-sm">Taschen</h4>
         <p class="font-light">La obra de Jean-Michel Basquiat.</p>
       </div>
     </article>
 
     <article data-libro data-open="false" class="group relative aspect-[2/3] cursor-pointer overflow-hidden">
       <img src="imagenes/catalogo/libro 8.png" class="h-full w-full object-cover">
-      <div class="absolute inset-0 flex flex-col justify-center bg-red-600 p-4 text-sm text-white opacity-0 transition-opacity duration-300 group-data-[open=true]:opacity-100 md:group-hover:opacity-100">
-        <h3 class="mb-2 font-bold uppercase">Los archivos personales de Stanley Kubrick</h3>
+      <div class="absolute inset-0 flex flex-col justify-center bg-red-600 p-4 text-sm text-white opacity-0 transition-opacity duration-300 group-data-[open=true]:opacity-100 md:group-hover:opacity-100 md:text-lg">
+        <h3 class="mb-2 text-base font-bold uppercase md:text-xl">Los archivos personales de Stanley Kubrick</h3>
+        <h4 class="mb-1 text-xs font-semibold uppercase tracking-wide md:text-sm">Taschen</h4>
         <p class="font-light">Fotos, notas y documentos de sus películas, editados por Alison Castle.</p>
       </div>
     </article>
 
     <article data-libro data-open="false" class="group relative aspect-[2/3] cursor-pointer overflow-hidden">
       <img src="imagenes/catalogo/revista4.png" class="h-full w-full object-cover">
-      <div class="absolute inset-0 flex flex-col justify-center bg-filigrana p-4 text-sm text-white opacity-0 transition-opacity duration-300 group-data-[open=true]:opacity-100 md:group-hover:opacity-100">
-        <h3 class="mb-2 font-bold uppercase">Elephant 33</h3>
-        <p class="font-light">El humor en el arte.</p>
+      <div class="absolute inset-0 flex flex-col justify-center bg-filigrana p-4 text-sm text-white opacity-0 transition-opacity duration-300 group-data-[open=true]:opacity-100 md:group-hover:opacity-100 md:text-lg">
+        <h3 class="mb-2 text-base font-bold uppercase md:text-xl">Elephant 33</h3>
+        <h4 class="mb-1 text-xs font-semibold uppercase tracking-wide md:text-sm">El humor en el arte</h4>
+        <p class="font-light"> Cómo el arte encontró el sentido del humor.</p>
       </div>
     </article>
 
