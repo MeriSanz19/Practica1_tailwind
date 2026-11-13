@@ -40,7 +40,7 @@
 <body class="about-page events-page bg-white font-helvetica font-medium text-black dark:bg-black dark:text-white">
 
   
-  <div class="flex min-h-svh w-full flex-col overflow-hidden md:min-h-0">
+  <div class="flex min-h-svh w-full flex-col overflow-hidden">
 
     
     <header class="fixed z-50 mt-[0px] h-[41px] w-full flex-none bg-filigrana md:mt-[0%] md:h-[max(41px,2.847vw)]">
@@ -62,7 +62,7 @@
         </a>
       </nav>
     </header>
-    <main class="events-main mt-[61px] px-3 md:px-[3.125%]">
+    <main class="events-main mt-[61px] flex-1 px-3 md:px-[3.125%]">
       <p class="m-0 text-[15px] leading-none text-red-600">EVENTOS DE ESTE MES EN FILIGRANA</p>
       <article
         class="event-card mt-[20px] flex min-h-[72px] items-center gap-2 bg-white px-2 py-1 transition-colors hover:bg-filigrana"
@@ -151,32 +151,6 @@
         <p class="m-0 text-[15px] leading-snug text-red-600">CHARLA<br>Adaptaciones cinematográficas</p>
       </article>
     </main>
-  </div>
-  <aside id="event-feature" class="event-feature" aria-hidden="true">
-    <img id="event-feature-image" src="imagenes/taller.png" alt="Taller creativo">
-    <div class="event-feature-color">
-      <div class="event-feature-heading">
-        <h2 id="event-feature-title"></h2>
-        <h3 id="event-feature-subtitle"></h3>
-      </div>
-      <p id="event-feature-description"></p>
-      <p id="event-feature-invitation"></p>
-      <p id="event-feature-date"></p>
-      <p id="event-feature-time"></p>
-      <form id="event-reservation-form" class="event-reservation-form" hidden>
-        <label>
-          NOMBRE:
-          <input id="reservation-first-name" name="firstName" type="text" autocomplete="given-name" placeholder="••••••" required>
-        </label>
-        <label>
-          APELLIDO:
-          <input id="reservation-last-name" name="lastName" type="text" autocomplete="family-name" placeholder="••••••" required>
-        </label>
-      </form>
-      <button id="event-reserve-button" class="event-reserve-button" type="button" aria-expanded="false" aria-controls="event-reservation-form">RESERVA</button>
-    </div>
-  </aside>
-  <div id="reservation-burst" class="reservation-burst" aria-hidden="true"></div>
 
   <section aria-label="Información de contacto" class="site-footer w-full border-t-[6px] border-filigrana bg-filigrana font-family: Helvetica, Arial, sans-serif">
 
@@ -211,7 +185,33 @@
           </p>
         </div>
     </section>
-    
+  </div>
+  <aside id="event-feature" class="event-feature" aria-hidden="true">
+    <img id="event-feature-image" src="imagenes/taller.png" alt="Taller creativo">
+    <div class="event-feature-color">
+      <div class="event-feature-heading">
+        <h2 id="event-feature-title"></h2>
+        <h3 id="event-feature-subtitle"></h3>
+      </div>
+      <p id="event-feature-description"></p>
+      <p id="event-feature-invitation"></p>
+      <p id="event-feature-date"></p>
+      <p id="event-feature-time"></p>
+      <form id="event-reservation-form" class="event-reservation-form" hidden>
+        <label>
+          NOMBRE:
+          <input id="reservation-first-name" name="firstName" type="text" autocomplete="given-name" placeholder="••••••" required>
+        </label>
+        <label>
+          APELLIDO:
+          <input id="reservation-last-name" name="lastName" type="text" autocomplete="family-name" placeholder="••••••" required>
+        </label>
+      </form>
+      <button id="event-reserve-button" class="event-reserve-button" type="button" aria-expanded="false" aria-controls="event-reservation-form">RESERVA</button>
+    </div>
+  </aside>
+  <div id="reservation-burst" class="reservation-burst" aria-hidden="true"></div>
+
   <script>
     const primaryMenu = document.getElementById('primary-menu');
     const navbarLogo = document.getElementById('navbar-logo');
